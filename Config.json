@@ -1,0 +1,59 @@
+{
+    "token": "Nzk4MTEzMjE0OTU2OTYxNzky.X_wS2g.BcGdAf-ylJd-6VALoE1aMmq_ErM",
+    "prefix": ">",
+    "activity": "Buisness as Usual",
+    "developers": ["184191493919997952", "477724737250787338"],
+
+    "jobs": [
+        { "name": "professor", "description": "Teach classes at Hogwarts.", "min": 100, "max": 300 },
+        { "name": "auror", "description": "N/A", "min": 200, "max": 300 },
+        { "name": "death eater", "description": "You work for The Dark Lord", "min": 50, "max": 70 },
+        { "name": "seer", "description": "Tell people their prophecies for money.", "min": 50, "max": 100 },
+        { "name": "shopworker", "description": "You work at shops in Diagon Alley", "min": 50, "max": 100 },
+        { "name": "shopkeeper", "description": "You own and work at shops in Diagon Alley", "min": 100, "max": 200 },
+        { "name": "quidditch star", "description": "You are a quidditch star from a young age you have been training for the fame and money and now you have both.", "min": 1500, "max": 3000 },
+        { "name": "ministry employee", "description": "You work for The Ministry Of Magic", "min": 50, "max": 150 },
+        { "name": "curse breaker", "description": "You break curses... duh", "min": 1000, "max": 2000 },
+        { "name": "ingredients supplier", "description": "You supply wizard kind with the means to make wonderful and beautiful things.", "min": 500, "max": 750 },
+        { "name": "spell crafter", "description": "Let your imagination run wild as you create spells that could make even a boggart turn their head.", "min": 750, "max": 1000 },
+        { "name": "potioneer", "description": "You work day and night to craft the most potent to the most vile of potions.", "min": 500, "max": 750 },
+        { "name": "wandmaker", "description": "Make wands for the use of Witches and Wizards everywhere!", "min": 150, "max": 400 }
+    ],
+
+    "locations": ["London", "Diagon Alley", "Hogwarts", "Ministry of Magic"],
+
+    "shop": {
+        "broomstick":{"response": "You hold out your broomstick use >broomstick for more", "price": 100, "description": "the basic broomstick for the standard witch or wizard.", "infinite": true, "hidden": false},
+        "bertiebotts": { "response": "use >bertiebotts", "price": 100, "description": "They really mean EVERY. FLAVOUR.", "infinite": true, "hidden": false},
+        "floo powder": { "response": "Use the Floo Network to get to Diagon Alley.", "price": 300, "description": "Powdery", "infinite": true, "hidden": false, "location": "diagon alley" },
+        "remembrall": {"response": "The smoke turns red but what have you forgotten?", "price":20, "description": "Glows red when the user has forgotten something.", "infinite": true, "hidden": false},
+        "elderwand": { "response": "use >elderwand", "price": 5000000000, "description": "One of three deathly hallows, The Elder Wand (NOT INTENDED FOR PURCHASE)", "infinite": true, "hidden": true },
+        "maraudersmap": { "response": "use >maraudersmap", "price": 5000000000, "description": "The Marauders Map (NOT INTENDED FOR PURCHASE)", "infinite": true, "hidden": true }
+    },
+
+    "rpgEncounter": [
+        { 
+            "title": "Dementor Attack", 
+            "action": "You come across a dementor you feel the air around you turn stale and emotionless it starts approaching you the air around you grows colder what do you do? \n1. reach for your wand and cast a Patronus \n2. Run for you life. \n3. Dont react and hope it passes you.", 
+            "option1": { "chance": 0.8, "reward": { "type": "money", "value": 50 }, "successMessage": "You fended off the dementor successfully and it flees, you gained $50", "failMessage": "you lost focus on your happy memory and failed the spell luckily the dementor fleed for unkown reasons.", "emoji": "1️⃣" }, 
+            "option2": { "chance": 0.5, "reward": { "type": "nothing"},  "successMessage": "You manage to escape the dementor and are freed of its presence, The air around you feels fresher", "failMessage": "You run as fast as you can but it is like running in a dream the dementor catches up to you turn and faint under the dementor's kiss when you awake nothing is around but you feel depressive.", "emoji": "2️⃣" }, 
+            "option3": { "chance": 0.5, "reward": { "type": "nothing" }, "successMessage": "You stand still and the dementor starts to attack you, What were you thinking? Luckily a bystander saw the attack and steps in to save you.", "failMessage": "The dementor flies past you it must of been hunting bigger game. *Phew", "emoji": "3️⃣" }
+        },
+        { 
+            "title": "An Old Piece Of Parchment 📜", 
+            "action": "You are walking down a street and see a piece of old parchment laying between some rocks you seem intrigued and approach it,\n upon inspection it looks to be something a magical person has made but appears empty what will you do with it? \n1. Put it back someone might be looking for it. \n2. Take it for yourself, Finders Keepers  \n3. Try and find the owner.", 
+            "option1": { "chance": 0.8, "reward": { "type": "nothing"}, "successMessage": "You put it back and walk away, it was probably rubbish anyway.", "failMessage": "You put it back and walk away off in the distance you see someone approach it and hold their wand up to it maybe they were writing something?", "emoji": "1️⃣" }, 
+            "option2": { "chance": 0.3, "reward": { "type": "item", "value": "maraudersmap" }, "successMessage": "you stash the item in your cloak and recieve The Marauders Map", "failMessage": "You attempt to stash the item but hear Petrificus Totalus! from behind you, it must be the original owner they have frozen you and taken the parchment back. As they walk off they glare back at you and call you a thief.", "emoji": "2️⃣" }, 
+            "option3": { "chance": 0.9, "reward": { "type": "nothing" }, "successMessage": "You look around for the original owner and find them they say that they left it there because they thought they had hidden it well under a spell they thought wrong... They pay you 20 gold for the trouble and thank you for returning it to them and not taking it.", "failMessage": "You look everywhere but can't find the owner of the parchment, you put it back and continue forward.", "emoji": "3️⃣" }
+        },
+        { 
+            "title": "A Child In Need", 
+            "action": "You walk upon what appears to be a fight between two young wizards, The first wizard yells out\n GIVE IT BACK!\n the second wizard yells back OR WHAT!\n That was my Fathers! the first wizard yells.\n I don't care who's it was it belongs to me now said the second wizard.\n You approach the wizards and?\n 1. Snatch the item back off of the bully and give it back to the first wizard.\n2.Join in with the second wizard and bully the first wizard. \n3. Walk away kids will be kids.", 
+            "option1": { "chance": 0.8, "reward": { "type": "money", "value": 5 }, "successMessage": "The First wizard thanks you i don't have much to thank you with but here. The boy gives you $5 and runs away before the bully can follow.", "failMessage": "The bully dodges your hand and runs away with the item.", "emoji": "1️⃣" }, 
+            "option2": { "chance": 0.5, "reward": { "type": "nothing" }, "successMessage": "You join in and bully the first wizard. After you are done dangling the first wizard from the nearby lamp post the second wizard thanks you for the help and then walks off into the distance.", "failMessage": "You go to help the bully but the bully ends up bullying both of you as you and the first wizard dangle from the lamp post you realise it wasnt wise to help the bully.", "emoji": "2️⃣" }, 
+            "option3": { "chance": 1, "reward": { "type": "nothing" }, "successMessage": "You walk away and hear the first wizards screams,\n It will toughen him up atleast you think to yourself.", "failMessage": "You walk away.", "emoji": "3️⃣" }
+        }
+    ],
+
+    "dailyReward": 1000
+}
