@@ -78,26 +78,9 @@ function pagify(array, size, page){
     return array;
 }
 
-function rolecheck(role){
-   
-    let ret = (msg.guild.member.roles.cache.find(r => r.name === role))
-     return ret; 
-}
-
-function dynamicgenerator(name){
-  
-    let rand = Math.floor(Math.random() * name.length);
-    let ret = name[rand]
-     return ret;
-
-}
-
-
 module.exports = {
     getFilesRecursive,
     formatTime,
     convertMiliseconds,
-    pagify,
-    rolecheck,
-    dynamicgenerator
+    pagify
 }

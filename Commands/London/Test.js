@@ -13,6 +13,6 @@ module.exports.config = {
     cmdPerms: ["EMBED_LINKS"],
     command: "test",
     cooldown: 5, 
-    location: 'london',
+    location: 'diagon alley',
 	args: false
 }

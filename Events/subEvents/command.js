@@ -91,9 +91,10 @@ module.exports.run = async(bot, message, prefix) => {
             for(let userRole of message.member.roles.cache.array())
                 if(roleID == userRole.id)
                     try { return command.run(bot, message, args) } catch (err) { return console.log("Unknown error", command.config.command) }
-                    
+
     let userDB = bot.db.get(message.author.id)
-    if(command.config.location && command.config.location != userDB.location)
+    console.log(userDB)
+    if(command.config.location && command.config.location != (userDB.location.hasOwnProperty))
         return message.channel.send(bot.embed(`To use that command you need to be in **${command.config.location}**`))
     //======================================================================
     try { 

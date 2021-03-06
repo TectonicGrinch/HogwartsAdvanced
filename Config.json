@@ -23,7 +23,7 @@
     "locations": ["London", "Diagon Alley", "Hogwarts", "Ministry of Magic"],
 
     "shop": {
-        "broomstick":{"response": "You hold out your broomstick use >broomstick for more", "price": 100, "description": "the basic broomstick for the standard witch or wizard.", "infinite": true, "hidden": false},
+        "broomstick": {"response": "You hold out your broomstick use >broomstick for more", "price": 100, "description": "the basic broomstick for the standard witch or wizard.", "infinite": true, "hidden": false, "location": "london"},
         "bertiebotts": { "response": "use >bertiebotts", "price": 100, "description": "They really mean EVERY. FLAVOUR.", "infinite": true, "hidden": false},
         "floo powder": { "response": "Use the Floo Network to get to Diagon Alley.", "price": 300, "description": "Powdery", "infinite": true, "hidden": false, "location": "diagon alley" },
         "remembrall": {"response": "The smoke turns red but what have you forgotten?", "price":20, "description": "Glows red when the user has forgotten something.", "infinite": true, "hidden": false},

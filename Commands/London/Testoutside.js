@@ -12,6 +12,6 @@ module.exports.config = {
     cmdPerms: ["EMBED_LINKS"],
     command: "testoutside",
     cooldown: 5, 
-    location: 'prague',
+    location: 'london',
 	args: false
 }

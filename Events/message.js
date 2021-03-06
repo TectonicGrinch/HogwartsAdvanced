@@ -6,7 +6,7 @@ module.exports = async (bot, message) => {
     let prefix = bot.config.prefix
 
     if(!bot.db.has(message.author.id)){
-        bot.db.set(message.author.id, { balance: 1000, inv: [], job: {}, daily: 0, location: 'London' })
+        bot.db.set(message.author.id, { balance: 1000, inv: [], job: {}, daily: 0, location: 'london' })
     }
 
     if (message.content.startsWith(prefix)){
