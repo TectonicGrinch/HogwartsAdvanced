@@ -7,16 +7,11 @@ module.exports.run = async (bot, message, args) => {
 
     let targetDB = bot.db.get(user.id)
     let userDB = bot.db.get(message.author.id)
-    args.shift()
-    if(!user){
 
-        message.channel.send(`You are in ${targetDB.location}`)
 
-    }else{
+
         
         message.channel.send(`You are in ${userDB.location}`)
-
-    }
 
 
 	//Code End

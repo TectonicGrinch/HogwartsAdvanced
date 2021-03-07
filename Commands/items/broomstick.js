@@ -8,6 +8,7 @@ module.exports.run = async (bot, message, args) => {
     let london = "london";
     let godricshollow = "godrics hollow";
     //Code Start
+
     let args1 = args[0]
     let args2 = args[1]
     let itemName = "broomstick";
@@ -29,13 +30,13 @@ module.exports.run = async (bot, message, args) => {
                      case 'london':
                         bot.db.set(`${message.author.id}.location`, london)
                         message.channel.send(bot.embed(`${message.author} Used their broomstick to travel to london.`))
-                        console.log(`${message.author.username}travelled to ${userDB.location} using their broomstick.`)
+                        console.log(`${message.author.username} travelled to ${userDB.location} using their broomstick.`)
                         break;
                      
-                     case 'godrics hollow':
+                     case 'godrics':
                         bot.db.set(`${message.author.id}.location`, godricshollow)
                         message.channel.send(bot.embed(`${message.author} Used their broomstick to travel to godrics hollow.`))
-                        console.log(`${message.author.username}travelled to ${userDB.location} using their broomstick.`)
+                        console.log(`${message.author.username} travelled to ${userDB.location} using their broomstick.`)
                         break;
                   
                      default:
@@ -73,7 +74,6 @@ module.exports.run = async (bot, message, args) => {
              }
             }
 
-console.log(`${message.author.username} used their broomstick.`)
     
 	//Code End
 

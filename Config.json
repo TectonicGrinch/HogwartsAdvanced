@@ -2,7 +2,7 @@
     "token": "Nzk4MTEzMjE0OTU2OTYxNzky.X_wS2g.BcGdAf-ylJd-6VALoE1aMmq_ErM",
     "prefix": ">",
     "activity": "Buisness as Usual",
-    "developers": ["184191493919997952", "477724737250787338"],
+    "developers": [],
 
     "jobs": [
         { "name": "professor", "description": "Teach classes at Hogwarts.", "min": 100, "max": 300 },
@@ -20,7 +20,7 @@
         { "name": "wandmaker", "description": "Make wands for the use of Witches and Wizards everywhere!", "min": 150, "max": 400 }
     ],
 
-    "locations": ["London", "Diagon Alley", "Hogwarts", "Ministry of Magic", "Godrics Hollow"],
+    "locations": ["London", "Diagon Alley", "Knockturn Alley", "Hogwarts", "Ministry of Magic", "Godrics Hollow"],
 
     "shop": {
         "broomstick": {"response": "You hold out your broomstick use >broomstick for more", "price": 100, "description": "the basic broomstick for the standard witch or wizard.", "infinite": true, "hidden": false, "location": "london"},

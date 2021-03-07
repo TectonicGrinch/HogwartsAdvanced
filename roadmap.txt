@@ -1,0 +1,18 @@
+ROADMAP
+
+Initial Release:
+jobs with 3 commands each.
+travel complete.
+deathly hallows.
+3-5 encounters per job.
+locational encounters 1-3 each.
+
+
+
+
+
+Hogwarts update 1:
+classes.
+scoring system for graduation.
+block money for students.
+make people start as students.
