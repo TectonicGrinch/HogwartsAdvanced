@@ -3,7 +3,7 @@ const Discord = require('discord.js');
 module.exports.run = async (bot, message, args) => {
 
     //Code Start
-    message.channel.send('You are in prague')
+    message.channel.send('You are in london')
 	//Code End
 
 }

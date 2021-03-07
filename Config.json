@@ -20,7 +20,7 @@
         { "name": "wandmaker", "description": "Make wands for the use of Witches and Wizards everywhere!", "min": 150, "max": 400 }
     ],
 
-    "locations": ["London", "Diagon Alley", "Hogwarts", "Ministry of Magic"],
+    "locations": ["London", "Diagon Alley", "Hogwarts", "Ministry of Magic", "Godrics Hollow"],
 
     "shop": {
         "broomstick": {"response": "You hold out your broomstick use >broomstick for more", "price": 100, "description": "the basic broomstick for the standard witch or wizard.", "infinite": true, "hidden": false, "location": "london"},

@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-const REQUIRED_JOB = "shopkeeper";
+const REQUIRED_JOB = "shopworker";
 const util = require('../../../Util/utils');
 
 module.exports.run = async (bot, message, args) => {
