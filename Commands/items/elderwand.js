@@ -4,9 +4,9 @@ module.exports.run = async (bot, message, args) => {
     //Code Start
     let itemName = "elderwand";
 
-    let userDB = bot.db.get(message.author.id)
-
-    let item = bot.config.shop[itemName]
+    let userDB = bot.db.get(message.author.id);
+    let idx = userDB.inv.findIndex(i => i.name == itemName);
+    let item = bot.config.shop[itemName];
     if(!item || !userDB.inv.some(i => i.name == itemName)){
 
   message.channel.send(bot.embed(`**You do not have The Elder Wand!**`));
@@ -34,7 +34,8 @@ module.exports.run = async (bot, message, args) => {
          message.channel.send(bot.embed(`You approach ${mention} and pull out the elder wand challenging them to a duel... They oblige you realise you might of made a mistake duelling them. The duel lasts for **${hrst}** and you end up Winning you keep the elderwand and also get **$${reward}**`))
 
             }else{
-             bot.db.subtract('userDB', 'elderwand')
+
+
          message.channel.send(bot.embed(`You approach ${mention} and pull out the elder wand challenging them to a duel... They oblige you realise you might of made a mistake duelling them. The duel lasts for **${hrst}** and you end up LOSING THE DUEL! THE ELDER WAND PASSES ONTO ${mention}`))
 
             }

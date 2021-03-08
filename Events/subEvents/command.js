@@ -94,8 +94,8 @@ module.exports.run = async(bot, message, prefix) => {
                     
     let userDB = bot.db.get(message.author.id)
     console.log(userDB)
-    if(command.test.location && command.test.location != (userDB.location || 'london'))
-        return message.channel.send(bot.embed(`To use that command you need to be in **${command.test.location}**`))
+    if(command.config.location && command.config.location != (userDB.location || 'london'))
+        return message.channel.send(bot.embed(`To use that command you need to be in **${command.config.location}**`))
     //======================================================================
     try { 
         command.run(bot, message, args, prefix); 
