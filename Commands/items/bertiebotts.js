@@ -6,12 +6,12 @@ module.exports.run = async (bot, message, args) => {
     
     
     let itemName = "bertiebotts"
-    let userDB = bot.db.get(message.author.id)
+    let userDB = bot.db.get(message.author.id);
     let item = bot.config.shop[itemName]
    
-    let flip = util.randomroll(1, 101)
-    let goodbeant = util.dynamicgenerator(goodbean) 
-    let badbeant = util.dynamicgenerator(badbean) 
+    let flip = Math.Floor(Math.random(1, 101));
+    let goodbeant = util.dynamicgenerator(goodbean); 
+    let badbeant = util.dynamicgenerator(badbean);
    
     if(!item || !userDB.inv.some(i => i.name == itemName)){
 

@@ -20,9 +20,12 @@ module.exports.run = async (bot, message, args) => {
     const filter = (r, u) => u.id == message.author.id && (r.emoji.name == encounter.option1.emoji || r.emoji.name == encounter.option2.emoji || r.emoji.name == encounter.option3.emoji)
 
     msg.awaitReactions(filter, { time: 60000, max: 1}).then(collected => {
+
         let emoji = collected.first().emoji.name
         let opt = Object.values(encounter).find(o => o.emoji == emoji)
         let isSuccessful = Math.random() <= opt.chance
+        let footerReward = isNaN( opt.reward.value || opt.reward.value )
+
         if(!isSuccessful)
             return message.channel.send(bot.embed(opt.failMessage))
         switch(opt.reward.type){
@@ -48,7 +51,16 @@ module.exports.run = async (bot, message, args) => {
                 break;
                 
         }
-        message.channel.send(bot.embed(opt.successMessage))
+        switch(opt.reward.type){
+            case 'item':
+                message.channel.send(bot.embed(opt.successMessage).setFooter(`Rewards: ${opt.reward.type} x1 ${opt.reward.value}`))
+                break;
+            case 'money':
+                message.channel.send(bot.embed(opt.successMessage).setFooter(`Rewards: ${opt.reward.type} $${opt.reward.value}`))
+                break;
+
+        }
+ 
     })
 	//Code End
 

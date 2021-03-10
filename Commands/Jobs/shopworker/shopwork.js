@@ -26,9 +26,9 @@ module.exports.run = async (bot, message, args) => {
 module.exports.config = {
     cmdPerms: ["EMBED_LINKS"],
     usage: "start work", //if args is set to false you can remove this otherwise describe how to use the command
-    command: "startwork",
+    command: "shopwork",
     location: "diagon alley",
-    aliases: ["startw"],
+    aliases: ["shopw"],
     cooldown: 10 * 60, //Cooldown in seconds
 	args: false //If the command requires input aka if you need to write just the command name or command name with some more arguments/fields
 }

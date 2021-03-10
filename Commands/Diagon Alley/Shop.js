@@ -14,17 +14,16 @@ module.exports.run = async (bot, message, args) => {
     message.channel.send(bot.embed(items.map(i => `**${i[0]}** - price: **$${i[1].price}** - description: ${i[1].description}`).join('\n')))
     break;
     case 'london':
-        message.channel.send(bot.embed(`london shop`))
+        message.channel.send(bot.embed(`london shop`));
         break;
     case 'hogsmeade':
-        message.channel.send(bot.embed(`hogsmeade shop`))
+        message.channel.send(bot.embed(`hogsmeade shop`));
     break;
     
     default:
-        message.channel.send(bot.embed(`This location doesn't have a shop.`))
+        message.channel.send(bot.embed(`This location doesn't have a shop.`));
         break;
 }
-
 }
 
 module.exports.config = {

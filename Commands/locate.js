@@ -3,18 +3,19 @@ const Discord = require('discord.js');
 module.exports.run = async (bot, message, args) => {
 
     //Code Start
-   let user = message.mentions.users.first();
 
-    let userDB = bot.db.get(message.author.id)
+   let user = message.mentions.users.first() || message.author;
+   let locObj = bot.db.get(user.id) || {};
 
 
 
         
-        message.channel.send(bot.embed(`You are in **${userDB.location}**`));
+        message.channel.send(bot.embed(`**${user.username}**
+        Location: **${locObj.location}**`));
 
 
 	//Code End
-    console.log(userDB.location)
+    console.log(locObj.location)
 }
 
 module.exports.config = {

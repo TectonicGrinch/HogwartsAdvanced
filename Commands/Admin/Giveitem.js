@@ -26,6 +26,7 @@ module.exports.run = async (bot, message, args) => {
 }
 
 module.exports.config = {
+    permission: "ADMINISTRATOR",
     cmdPerms: ["EMBED_LINKS"],
     usage: "@user [item name]", //if args is set to false you can remove this otherwise describe how to use the command
     command: "giveitem",

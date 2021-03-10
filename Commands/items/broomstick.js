@@ -7,6 +7,7 @@ module.exports.run = async (bot, message, args) => {
     let mention = message.mentions.users.first();
     let london = "london";
     let godricshollow = "godrics hollow";
+    let ministry = "ministry of magic";
     //Code Start
 
     let args1 = args[0]
@@ -38,9 +39,13 @@ module.exports.run = async (bot, message, args) => {
                         message.channel.send(bot.embed(`${message.author} Used their broomstick to travel to godrics hollow.`))
                         console.log(`${message.author.username} travelled to ${userDB.location} using their broomstick.`)
                         break;
-                  
-                     default:
-                         message.channel.send(bot.embed(`london | godrics hollow`))
+                     case 'ministry':
+                        bot.db.set(`${message.author.id}.location`, ministry)                        
+                        message.channel.send(bot.embed(`${message.author} Used their broomstick to travel to The Ministry Of Magic`))    
+                        console.log(`${message.author.username} travelled to ${userDB.location} using their broomstick.`)              
+                         break;
+                        default:
+                         message.channel.send(bot.embed(`london | godrics hollow| ministry`))
                          break;
 
                 }

@@ -1,6 +1,7 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 
+
 bot.db = require('quick.db')
 
 bot.config = require('./Config.json');
@@ -14,7 +15,13 @@ require('./Handlers/Events.js')(bot);
 bot.embed = (m) => {
     return new Discord.MessageEmbed()
         .setDescription(m)
-        .setColor('RANDOM');
+        .setColor('RANDOM')
+        .setTimestamp();
+
+
+
 }
+
+
 
 bot.login(bot.config.token);
