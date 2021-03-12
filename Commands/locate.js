@@ -4,7 +4,7 @@ module.exports.run = async (bot, message, args) => {
 
     //Code Start
 
-   let user = message.mentions.users.first() || message.author;
+   let user = message.author;
    let locObj = bot.db.get(user.id) || {};
 
 
@@ -15,7 +15,7 @@ module.exports.run = async (bot, message, args) => {
 
 
 	//Code End
-    console.log(locObj.location)
+    console.log(`${user} is located at ${locObj.location}`)
 }
 
 module.exports.config = {

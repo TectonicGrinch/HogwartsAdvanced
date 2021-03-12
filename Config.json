@@ -3,6 +3,7 @@
     "prefix": ">",
     "activity": "Buisness as Usual",
     "developers": ["184191493919997952"],
+    "embedColor": "RANDOM",
 
     "jobs": [
         { "name": "professor", "description": "Teach classes at Hogwarts.", "min": 100, "max": 300 },
@@ -21,7 +22,7 @@
     ],
 
     "locations": ["London", "Diagon Alley", "Knockturn Alley", "Hogwarts", "Ministry of Magic", "Godrics Hollow"],
-
+   
     "shop": {
         "broomstick": {"response": "You hold out your broomstick use >broomstick for more", "price": 100, "description": "the basic broomstick for the standard witch or wizard.", "infinite": true, "hidden": false, "location": "london"},
         "bertiebotts": { "response": "use >bertiebotts", "price": 100, "description": "They really mean EVERY. FLAVOUR.", "infinite": true, "hidden": false},
@@ -31,7 +32,7 @@
         "maraudersmap": { "response": "use >maraudersmap", "price": 5000000000, "description": "The Marauders Map (NOT INTENDED FOR PURCHASE)", "infinite": true, "hidden": true },
         "betakey": { "response": "use >betakey", "price": 5000000000, "description": "beta-key for all of those before the bot initial release", "infinite": true, "hidden": true }
     },
-
+    
     "rpgEncounter": [
         { 
             "title": "Dementor Attack", 
@@ -41,11 +42,11 @@
             "option3": { "chance": 0.5, "reward": { "type": "nothing" }, "successMessage": "You stand still and the dementor starts to attack you, What were you thinking? Luckily a bystander saw the attack and steps in to save you.", "failMessage": "The dementor flies past you it must of been hunting bigger game. *Phew", "emoji": "3️⃣" }
         },
         { 
-            "title": "An Old Piece Of Parchment 📜", 
+            "title": "An Old Piece Of Parchment", 
             "action": "You are walking down a street and see a piece of old parchment laying between some rocks you seem intrigued and approach it,\n upon inspection it looks to be something a magical person has made but appears empty what will you do with it? \n1. Put it back someone might be looking for it. \n2. Take it for yourself, Finders Keepers  \n3. Try and find the owner.", 
             "option1": { "chance": 0.8, "reward": { "type": "nothing"}, "successMessage": "You put it back and walk away, it was probably rubbish anyway.", "failMessage": "You put it back and walk away off in the distance you see someone approach it and hold their wand up to it maybe they were writing something?", "emoji": "1️⃣" }, 
             "option2": { "chance": 0.3, "reward": { "type": "item", "value": "maraudersmap" }, "successMessage": "you stash the item in your cloak and recieve The Marauders Map", "failMessage": "You attempt to stash the item but hear Petrificus Totalus! from behind you, it must be the original owner they have frozen you and taken the parchment back. As they walk off they glare back at you and call you a thief.", "emoji": "2️⃣" }, 
-            "option3": { "chance": 0.9, "reward": { "type": "nothing" }, "successMessage": "You look around for the original owner and find them they say that they left it there because they thought they had hidden it well under a spell they thought wrong... They pay you 20 gold for the trouble and thank you for returning it to them and not taking it.", "failMessage": "You look everywhere but can't find the owner of the parchment, you put it back and continue forward.", "emoji": "3️⃣" }
+            "option3": { "chance": 0.9, "reward": { "type": "money", "value": 20 }, "successMessage": "You look around for the original owner and find them they say that they left it there because they thought they had hidden it well under a spell they thought wrong... They pay you $20 for the trouble and thank you for returning it to them and not taking it.", "failMessage": "You look everywhere but can't find the owner of the parchment, you put it back and continue forward.", "emoji": "3️⃣" }
         },
         { 
             "title": "A Child In Need", 
@@ -55,13 +56,13 @@
             "option3": { "chance": 1, "reward": { "type": "nothing" }, "successMessage": "You walk away and hear the first wizards screams,\n It will toughen him up atleast you think to yourself.", "failMessage": "You walk away.", "emoji": "3️⃣" }
         },
     
-    { 
-        "title": "Toilet Issues", 
-        "action": "As you are walking through the corridors of Hogwards second floor, a young boy darts out of the bathrooms and bumps into you at full speed. You prepare to start a rant, but before seeing his face he is already running in the other direction.\n **1. Chase that little...**\n**2.Check the bathroom he came from.**\n**3.I was like that on my first year.** ***Walks away.***", 
-        "option1": { "chance": 0.4, "reward": { "type": "item", "value": "bertiebotts" }, "successMessage": "You are getting too old for this, as soon as you catch up to the child, you hear a loud explosion coming from the bathroom, the entire place covered in filth. The boy spends the rest of the day cleaning the room, he seems genuinely sorry after the work and even shares with you some treats from his bag. ", "failMessage": "The little brat is almost at your grasp when you slip on a puddle in the corridor floor and fall, right after his escape you discover what the prank was, the whole bathroom filled with an unbearable smell. ***I wonder where a first year learnt aquamenti***", "emoji": "1️⃣" }, 
-        "option2": { "chance": 0.7, "reward": { "type": "money", "value": 100 }, "successMessage": "As you enter the room you spot what seems like a particularly big dungbomb on the floor. Luckily you managed to get rid of the thing before it activated. You are rewarded with a bonus that month, for saving that bathroom from a most disreputable end.", "failMessage": "As you enter the toilet your feet stumbles into something, next thing you know you are in a bed at the Hogwarts hospital wing. Some students have found you feinted in the smelly bathroom after stumbling over a dungbomb. The stink still sticks to you.", "emoji": "2️⃣" }, 
-        "option3": { "chance": 0.9, "reward": { "type": "nothing" }, "successMessage": "While you walk away you hear a loud sound, it seems the boy had planted a dungbomb on the bathroom. ***I pity the one who will have to clean this mess***.", "failMessage": "While preparing to walk away, you notice the boy has stained your clothes with dirt, you decide to clean it in the bathroom, but as soon as the door opens an extremely stinky smoke hits your nostrils. You walk away coughing and realize that child had placed a dungbomb in the toilet.", "emoji": "3️⃣" }
-    }
+        { 
+            "title": "Toilet Issues", 
+            "action": "As you are walking through the corridors of Hogwards second floor, a young boy darts out of the bathrooms and bumps into you at full speed. You prepare to start a rant, but before seeing his face he is already running in the other direction.\n **1. Chase that little...**\n**2.Check the bathroom he came from.**\n**3.I was like that on my first year.** ***Walks away.***", 
+            "option1": { "chance": 0.4, "reward": { "type": "item", "value": "bertiebotts" }, "successMessage": "You are getting too old for this, as soon as you catch up to the child, you hear a loud explosion coming from the bathroom, the entire place covered in filth. The boy spends the rest of the day cleaning the room, he seems genuinely sorry after the work and even shares with you some treats from his bag. ", "failMessage": "The little brat is almost at your grasp when you slip on a puddle in the corridor floor and fall, right after his escape you discover what the prank was, the whole bathroom filled with an unbearable smell. ***I wonder where a first year learnt aquamenti***", "emoji": "1️⃣" }, 
+            "option2": { "chance": 0.7, "reward": { "type": "money", "value": 100 }, "successMessage": "As you enter the room you spot what seems like a particularly big dungbomb on the floor. Luckily you managed to get rid of the thing before it activated. You are rewarded with a bonus that month, for saving that bathroom from a most disreputable end.", "failMessage": "As you enter the toilet your feet stumbles into something, next thing you know you are in a bed at the Hogwarts hospital wing. Some students have found you feinted in the smelly bathroom after stumbling over a dungbomb. The stink still sticks to you.", "emoji": "2️⃣" }, 
+            "option3": { "chance": 0.9, "reward": { "type": "nothing" }, "successMessage": "While you walk away you hear a loud sound, it seems the boy had planted a dungbomb on the bathroom. ***I pity the one who will have to clean this mess***.", "failMessage": "While preparing to walk away, you notice the boy has stained your clothes with dirt, you decide to clean it in the bathroom, but as soon as the door opens an extremely stinky smoke hits your nostrils. You walk away coughing and realize that child had placed a dungbomb in the toilet.", "emoji": "3️⃣" }
+        }
     ],
 
     "dailyReward": 1000

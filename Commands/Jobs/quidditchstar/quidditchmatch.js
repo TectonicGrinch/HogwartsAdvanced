@@ -13,7 +13,7 @@ module.exports.run = async (bot, message, args) => {
         let reward = Math.floor(Math.random() * (userDB.job.max - userDB.job.min) + userDB.job.min)
  
  
-        let quidditchoutcome = util.randomroll(1, 101)
+        let quidditchoutcome = util.randomRoll(1, 101)
         console.log(`${message.author.username} used !quidditchgame and rolled a ${quidditchoutcome}`)
 
 if(quidditchoutcome > 50){

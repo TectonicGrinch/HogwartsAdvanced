@@ -1,6 +1,7 @@
 const Discord = require('discord.js');
 const util = require('../../Util/utils');
-const trickarray = require (`../../json/broomtricks`);
+const trickarray = require(`../../json/broomtricks`);
+const londonShop = require('../../json/location/shop/london.json')
 
 module.exports.run = async (bot, message, args) => {
 
@@ -12,6 +13,7 @@ module.exports.run = async (bot, message, args) => {
 
     let args1 = args[0]
     let args2 = args[1]
+
     let itemName = "broomstick";
 
     let userDB = bot.db.get(message.author.id)
@@ -31,25 +33,25 @@ module.exports.run = async (bot, message, args) => {
                      case 'london':
                         bot.db.set(`${message.author.id}.location`, london)
                         message.channel.send(bot.embed(`${message.author} Used their broomstick to travel to london.`))
-                        console.log(`${message.author.username} travelled to ${userDB.location} using their broomstick.`)
-                        break;
+                     break;
                      
                      case 'godrics':
                         bot.db.set(`${message.author.id}.location`, godricshollow)
                         message.channel.send(bot.embed(`${message.author} Used their broomstick to travel to godrics hollow.`))
-                        console.log(`${message.author.username} travelled to ${userDB.location} using their broomstick.`)
+
                         break;
                      case 'ministry':
                         bot.db.set(`${message.author.id}.location`, ministry)                        
                         message.channel.send(bot.embed(`${message.author} Used their broomstick to travel to The Ministry Of Magic`))    
-                        console.log(`${message.author.username} travelled to ${userDB.location} using their broomstick.`)              
+                      
                          break;
                         default:
                          message.channel.send(bot.embed(`london | godrics hollow| ministry`))
                          break;
+                        
 
                 }
-
+                console.log(`${message.author.username} has travelled from ${userDB.location} to ${args2}`)
             break;
 
             case 'race':

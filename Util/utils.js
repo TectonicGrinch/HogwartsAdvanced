@@ -90,6 +90,13 @@ function dynamicgenerator(name){
      return ret;
 
 }
+function randomRoll(numOne, numTwo){
+ let ret = Math.floor(Math.random() * (numOne, numTwo));
+
+ return ret;
+
+
+}
 
 module.exports = {
     getFilesRecursive,
@@ -97,5 +104,6 @@ module.exports = {
     convertMiliseconds,
     pagify,
     rolecheck,
-    dynamicgenerator
+    dynamicgenerator,
+    randomRoll
 }

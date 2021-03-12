@@ -1,5 +1,4 @@
 const Discord = require('discord.js');
-const { ReactionCollector, MessageCollector } = require("eris-collector");
 const util = require("../../Util/utils");
 const quidteam1 = require('../../json/quidditchteams.json');
 const quidteam2 = require('../../json/quidditchteams.json');

@@ -3,7 +3,17 @@ const Discord = require('discord.js');
 module.exports.run = async (bot, message, args) => {
     //Code Start
     
-
+    let user = message.mentions.users.first() || message.author;
+    let locObj = bot.db.get(user.id) || {};
+ 
+ 
+ 
+         
+         message.channel.send(bot.embed(`
+         **Marauders Map**
+         Found User: **${user.username}**
+         Location: **${locObj.location}**`));
+ 
 
 
 
