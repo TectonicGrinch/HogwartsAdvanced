@@ -6,9 +6,11 @@ module.exports.run = async (bot, message, args) => {
     //Code Start
     if(args[0]?.toLowerCase() == 'show'){
         args.shift()
+        items = require('../../json/items/items.json')
         let itemName = args.join(' ').toLowerCase()
         let userDB = bot.db.get(message.author.id)
-        let item = bot.config.shop[itemName]
+        let item = items.allitems[itemName]
+    
         if(!item || !userDB.inv.some(i => i.name == itemName))
             return message.channel.send(bot.embed('No item exists with that name.'))
 
@@ -16,7 +18,7 @@ module.exports.run = async (bot, message, args) => {
     }
     let page = isNaN(args[0]) ? 1 : Number(args[0]) 
     let user = message.mentions.users.first() || message.author
-
+ 
     let userDB = bot.db.get(user.id)
     let inv = pagify(userDB.inv, 10, page)
 

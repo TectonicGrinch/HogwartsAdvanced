@@ -8,7 +8,8 @@ module.exports.run = async (bot, message, args) => {
         return message.channel.send(bot.embed('No user mentioned'))
     args.shift()
     const itemName = args.join(' ')
-    let item = bot.config.shop[itemName]
+    let items = require('../../json/items/items.json')
+    let item = items.shop[itemName]
     if(!item)
         return message.channel.send(bot.embed('No item exists with that name.'))
 
