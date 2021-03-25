@@ -1,37 +1,86 @@
 const Discord = require('discord.js');
-const util = require('../../../Util/utils');
 
-
-const REQUIRED_JOB = "quidditch star"
 module.exports.run = async (bot, message, args) => {
+    let quidditchEncounters = require('../../../json/encounters/quidditchencounters.json')
+    let allitem = require('../../../json/items/items.json')
 
     //Code Start
-    let userDB = bot.db.get(message.author.id)
-    if(!userDB.job.hasOwnProperty('name') || (REQUIRED_JOB && userDB.job.name != REQUIRED_JOB))
-        return message.channel.send(bot.embed(`You can\'t use this command. ${REQUIRED_JOB ? `You need to work as a ${REQUIRED_JOB}` : `You don't have a job.`}`))
+    let encounter = quidditchEncounters.rpgEncounter[Math.floor(Math.random() * bot.config.rpgEncounter.length)]
 
-        let reward = Math.floor(Math.random() * (userDB.job.max - userDB.job.min) + userDB.job.min)
+
+
+    const encounterEmbed = new Discord.MessageEmbed()
+        .setTitle(encounter.title)
+        .setDescription(encounter.action)
+        .setColor('RANDOM')
+        .setTimestamp()
+
+
+    let msg = await message.channel.send(encounterEmbed)
+
+
+    msg.react(encounter.option1.emoji)
+    msg.react(encounter.option2.emoji)
+    msg.react(encounter.option3.emoji)
+
+    const filter = (r, u) => u.id == message.author.id && (r.emoji.name == encounter.option1.emoji || r.emoji.name == encounter.option2.emoji || r.emoji.name == encounter.option3.emoji)
+
+    msg.awaitReactions(filter, { time: 60000, max: 1}).then(collected => {
+
+        let emoji = collected.first().emoji.name
+        let opt = Object.values(encounter).find(o => o.emoji == emoji)
+        let isSuccessful = Math.random() <= opt.chance
  
+
+        if(!isSuccessful)
+            return message.channel.send(bot.embed(opt.failMessage).setFooter(`No Rewards`))
+        switch(opt.reward.type){
+            case 'money':
+                bot.db.add(`${message.author.id}.balance`, opt.reward.value)
+                break
+
+            case 'item': 
+                let item = allitem.allitems[opt.reward.value]
+                if(item){
+                    let userDB = bot.db.get(message.author.id)
+                    let idx = userDB.inv.findIndex(i => i.name == opt.reward.value)
+                    if(idx == -1){
+                        userDB.inv.push({ name: opt.reward.value, amount: 1, response: item.response })
+                    }else{
+                        userDB.inv[idx].amount++;
+                    }
+                    bot.db.set(message.author.id, userDB)
+                }
+                break
+
+            case 'nothing':
+                break;
+                
+        }
+        switch(opt.reward.type){
+            case 'item':
+                message.channel.send(bot.embed(opt.successMessage).setFooter(`Rewards: ${opt.reward.type} x1 ${opt.reward.value}`))
+                break;
+            case 'money':
+                message.channel.send(bot.embed(opt.successMessage).setFooter(`Rewards: ${opt.reward.type} $${opt.reward.value}`))
+                break;
+            case 'nothing':
+                message.channel.send(bot.embed(opt.successMessage).setFooter(`No Rewards`))
+                break;
+
+
+        }
  
-        let quidditchoutcome = util.randomRoll(1, 101)
-        console.log(`${message.author.username} used !quidditchgame and rolled a ${quidditchoutcome}`)
+    })
 
-if(quidditchoutcome > 50){
-   message.channel.send(bot.embed(`${message.author}'s team lost and they were not rewarded for their effort.`).attachFiles([`./resources/joboutcomes/quidditchstar/lost.png`]).setImage(`attachment://lost.png`).setColor('#000000'));
+    //Code End
+}
 
-}else{
 
-    bot.db.add(`${message.author.id}.balance`, reward);
-    message.channel.send(bot.embed(`**${message.author}'s** ***TEAM WON THE QUIDDITCH MATCH*** \n and was paid **$${reward} for winning.**`).attachFiles([`./resources/joboutcomes/quidditchstar/won.png`]).setImage(`attachment://won.png`).setColor('#FBF700'));
-	//Code End
-
-}}
 
 module.exports.config = {
     cmdPerms: ["EMBED_LINKS"],
-    usage: "", //if args is set to false you can remove this otherwise describe how to use the command
-    command: "quidditchgame",
-    aliases: ["quidgame", "qgame", "qmatch", "quidditchmatch"],
+    command: "quidditchmatch",
     cooldown: 5, //Cooldown in seconds
 	args: false //If the command requires input aka if you need to write just the command name or command name with some more arguments/fields
 }

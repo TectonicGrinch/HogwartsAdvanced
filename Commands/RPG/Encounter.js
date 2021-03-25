@@ -1,6 +1,7 @@
 const Discord = require('discord.js');
 
 module.exports.run = async (bot, message, args) => {
+    let allitem = require('../../json/items/items.json')
 
     //Code Start
     let encounter = bot.config.rpgEncounter[Math.floor(Math.random() * bot.config.rpgEncounter.length)]
@@ -38,7 +39,7 @@ module.exports.run = async (bot, message, args) => {
                 break
 
             case 'item': 
-                let item = bot.config.shop[opt.reward.value]
+                let item = allitem.allitems[opt.reward.value]
                 if(item){
                     let userDB = bot.db.get(message.author.id)
                     let idx = userDB.inv.findIndex(i => i.name == opt.reward.value)

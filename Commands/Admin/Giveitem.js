@@ -3,25 +3,27 @@ const Discord = require('discord.js');
 module.exports.run = async (bot, message, args) => {
 
     //Code Start
-    let user = message.mentions.users.first()
+
+    let user = message.mentions.users.first();
     if(!user)
         return message.channel.send(bot.embed('No user mentioned'))
     args.shift()
     const itemName = args.join(' ')
     let items = require('../../json/items/items.json')
-    let item = items.shop[itemName]
+    let item = items.allitems[itemName]
     if(!item)
         return message.channel.send(bot.embed('No item exists with that name.'))
 
-    let userDB = bot.db.get(message.author.id)
+    let userDB = bot.db.get(user.id)
     let idx = userDB.inv.findIndex(i => i.name == itemName)
     if(idx == -1){
         userDB.inv.push({ name: itemName, amount: 1, response: item.response, infinite: item.infinite })
     }else{
         userDB.inv[idx].amount++;
     }
-    bot.db.set(message.author.id, userDB)
+    bot.db.set(user.id, userDB)
     message.channel.send(bot.embed(`You have given 1x ${itemName} to ${user}`))
+    
 	//Code End
 
 }

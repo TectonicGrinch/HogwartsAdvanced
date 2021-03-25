@@ -3,27 +3,38 @@ const Discord = require('discord.js');
 module.exports.run = async (bot, message, args) => {
     let user = message.author.username
     let itemName = "betakey";
-    let opt = args.shift().toLowerCase()
-
-    switch(opt){
-    case 'info':
-         message.channel.send(bot.embed(``))
-        break;
-    case 'special':
-
-        break;
-    case 'flex':
-        message.channel.send(bot.embed(`Thats right ${user} has a beta key they were here before you knew the bot existed arent they cool!`).attachFiles([`./resources/gifs/flex.gif`]).setImage(`attachment://flex.gif`))
-        break;
-    default:
-        message.channel.send(bot.embed(`>betakey info | special | flex`))
-        break;
+    let opt = args.shift()
     
+    let array = ['info', 'special', 'flex', 'default']
+    
+    if(opt[0]){
 
+      if(array.prototype.includes()){
+    
+        if (opt[0] === 'info'){
+            message.channel.send(`info`);
 
+        }
+        if (opt[0] === 'special'){
+            message.channel.send('special')
 
+        }
+        if(opt[0] === 'flex'){
+    
+            message.channel.send('flex')
+
+        }
+        if(opt[0] === 'default'){
+            message.channel.send('>betauser info | special | flex')
+
+    
+    
+        }
     }
-
+    }else{
+        message.channel.send('error')
+    }
+    console.log(a)
 }
 
 module.exports.config = {
@@ -32,5 +43,5 @@ module.exports.config = {
     command: "betauser",
     aliases: ["bu"],
     cooldown: 5, //Cooldown in seconds
-	args: true //If the command requires input aka if you need to write just the command name or command name with some more arguments/fields
+	args: false //If the command requires input aka if you need to write just the command name or command name with some more arguments/fields
 }

@@ -1,10 +1,15 @@
 const Discord = require('discord.js');
+const fs = require('fs')
 const bot = new Discord.Client();
 
 
+
+
 bot.db = require('quick.db')
+bot.SQLdb = require('sqlite3')
 
 bot.config = require('./Config.json');
+bot.allitems = require('./json/items/items.json');
 bot.commands = new Discord.Collection();
 bot.aliases = new Discord.Collection();
 bot.cooldowns = new Discord.Collection();
@@ -24,4 +29,7 @@ bot.embed = (m) => {
 
 
 
+
+
 bot.login(bot.config.token);
+

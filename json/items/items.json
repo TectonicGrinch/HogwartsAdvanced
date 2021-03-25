@@ -1,13 +1,18 @@
 {
     "allitems": {
         "broomstick": {"response": "You hold out your broomstick use >broomstick for more", "price": 100, "description": "the basic broomstick for the standard witch or wizard.", "infinite": true, "hidden": false, "location": "london"},
+        "chocolatefrog": { "response": "you hold up your chocolate frog", "price": 10, "description": "Made with %70 of the finest Croakoa can you collect all the cards?", "infinite": true, "hidden": false},        
         "bertiebotts": { "response": "use >bertiebotts", "price": 100, "description": "They really mean EVERY. FLAVOUR.", "infinite": true, "hidden": false},
         "floo powder": { "response": "Use the Floo Network to get to Diagon Alley.", "price": 300, "description": "Powdery", "infinite": true, "hidden": false, "location": "diagon alley" },
         "remembrall": {"response": "The smoke turns red but what have you forgotten?", "price":20, "description": "Glows red when the user has forgotten something.", "infinite": true, "hidden": false},
         "elderwand": { "response": "use >elderwand", "price": 5000000000, "description": "One of three deathly hallows, The Elder Wand (NOT INTENDED FOR PURCHASE)", "infinite": true, "hidden": true },
         "maraudersmap": { "response": "use >maraudersmap", "price": 5000000000, "description": "The Marauders Map (NOT INTENDED FOR PURCHASE)", "infinite": true, "hidden": true },
         "betakey": { "response": "use >betakey", "price": 5000000000, "description": "beta-key for all of those before the bot initial release", "infinite": true, "hidden": true },
-        "knightbus ticket": { "response": "Catch the Knight Bus to Diagon Alley.", "price": 300, "description": "Ticket to diagon alley x1 use >location travel diagon alley", "infinite": false, "hidden": false, "location": "diagon alley" }
+        "knightbus ticket": { "response": "Catch the Knight Bus to Diagon Alley.", "price": 300, "description": "Ticket to diagon alley x1 use >location travel diagon alley", "infinite": false, "hidden": false, "location": "diagon alley" },
+        "wand": { "response": "You hold up your wand", "price": 20, "description": "A wand for a starter wizard or maybe a replacement?", "infinite": false, "hidden": false},
+        "emeraldheart": {"response": "You hold The Emerald Heart in your hand", "price": 100, "description": "A heart made of emerald", "infinite": true, "hidden": true},
+        "sword of gryffindor": {"response": "You hold up The Sword of Gryffindor", "price": 10000000, "description": "Only a true gryffindor can pull the sword from the hat.", "infinite": true, "hidden": true}
+
 
     }
 }

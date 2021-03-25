@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const util = require('../../../Util/utils.js');
-const deatheaterencounters = require(`../../../encounters/deatheaterencounters.json`)
+const deatheaterencounters = require(`../../../json/encounters/deatheaterencounters.json`)
 const REQUIRED_JOB = "death eater"
 module.exports.run = async (bot, message, args) => {
     //Commmand to teach a random class in an array

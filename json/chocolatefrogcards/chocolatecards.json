@@ -1,0 +1,24 @@
+{
+                
+        "Rarity3": {       
+            "ViridianZe": { "collection": "HogwartsBot", "desc": "ViridianZe Card","rarity": "3", "numb": "1"},
+            "Vahlgoul": { "collection": "HogwartsBot", "desc": "Vahlgoul Card","rarity": "3", "numb": "2"},
+            "KingMyrddin": { "collection": "HogwartsBot", "desc": "Vahlgoul Card","rarity": "3", "numb": "3"},
+            "Alex": { "collection": "HogwartsBot", "desc": "Vahlgoul Card","rarity": "3", "numb": "4"}
+
+        },
+        "Rarity2": {       
+            "ViridianZe": { "collection": "HogwartsBot", "desc": "ViridianZe Card","rarity": "3", "numb": "1"},
+            "Vahlgoul": { "collection": "HogwartsBot", "desc": "Vahlgoul Card","rarity": "3", "numb": "2"},
+            "KingMyrddin": { "collection": "HogwartsBot", "desc": "Vahlgoul Card","rarity": "3", "numb": "3"},
+            "Alex": { "collection": "HogwartsBot", "desc": "Vahlgoul Card","rarity": "3", "numb": "4"}
+
+        } ,
+        "Rarity1": {       
+            "Albus Dumbledore": { "collection": "Hogwarts", "desc": "Albus Dumbledore current headmaster at Hogwarts School of Witchcraft and Wizardry","rarity": "1", "numb": "1"},
+            "Severus Snape": { "collection": "HogwartsBot", "desc": "Vahlgoul Card","rarity": "3", "numb": "2"},
+            "KingMyrddin": { "collection": "HogwartsBot", "desc": "Vahlgoul Card","rarity": "3", "numb": "3"},
+            "Alex": { "collection": "HogwartsBot", "desc": "Vahlgoul Card","rarity": "3", "numb": "4"}
+
+        } 
+}

@@ -21,6 +21,12 @@
         { "name": "wandmaker", "description": "Make wands for the use of Witches and Wizards everywhere!", "min": 150, "max": 400 }
     ],
 
+    "bloodType":["Pure Blood", "Half Blood", "Muggle-Born"],
+
+    "race":["Human", "House Elf", "Ghost", "Goblin", "Giant", "Half-Giant"],
+
+    "specialAttribute":["Vampire", "Werewolf", "Animagus"],
+
     "locations": ["London", "Diagon Alley", "Knockturn Alley", "Hogwarts", "Ministry of Magic", "Godrics Hollow"],
    
     "rpgEncounter": [

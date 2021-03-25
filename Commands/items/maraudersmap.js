@@ -4,7 +4,7 @@ module.exports.run = async (bot, message, args) => {
     //Code Start
     
     let user = message.mentions.users.first() || message.author;
-    let locObj = bot.db.get(user.id) || {};
+    let locObj = bot.db.get(user.id)
  
  
  
@@ -12,7 +12,7 @@ module.exports.run = async (bot, message, args) => {
          message.channel.send(bot.embed(`
          **Marauders Map**
          Found User: **${user.username}**
-         Location: **${locObj.location}**`));
+         Location: **${locObj.location || 'hidden'}**`).attachFiles([`./resources/gifs/maraudersmap.gif`]).setImage(`attachment://maraudersmap.gif`));
  
 
 

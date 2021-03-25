@@ -1,0 +1,15 @@
+{
+    "rpgEncounter": [
+    
+    
+        { 
+            "title": "Order of Merlin VS Bulgaria", 
+            "action": "The match commences after some time the Score is Order of Merlin 110 and Bulgaria 130 you being the team seeker are free game for the beaters you see two people fly towards you with bats in hand but just underthem the golden snitch zooms by what do you choose? \n1. Fly towards them and drop in hopes of catching the snitch. \n2. Alert your team of their presence and focus on getting away. \n3. Draw them closer and attempt a risky maneuver.", 
+            "option1": { "chance": 0.4, "reward": { "type": "money", "value": 500 }, "successMessage": "You managed to dive right before they were planning to take you out and you also caught the golden snitch YOUR TEAM WINS!", "failMessage": "You flew towards their beaters but they knocked you out of the game right before you dived... Bad luck...", "emoji": "1️⃣" }, 
+            "option2": { "chance": 0.5, "reward": { "type": "money", "value": 250},  "successMessage": "You yell out to your team for help and your team beaters come to your rescue as an added bonus you also stumble across the golden snitch and manage to catch it for your team YOUR TEAM WINS!", "failMessage": "You yell out to your team but the sound of the match covers your voice you turn to see a bludger coming at your face. You wake up in an infirmary your team lost but atleast they left some get well soon cards by your bed.", "emoji": "2️⃣" }, 
+            "option3": { "chance": 0.2, "reward": { "type": "money", "value": 5000 }, "successMessage": "You managed to do a risky maneuver you swirved under the bludger and dived inbetween the beaters whilst catching the golden snitch YOUR TEAM WINS! And your team sponser provided your team extra funding for your skill.", "failMessage": "You attempted the risky maneuver and failed your broom lost control and you fell off it. luckily enough you find your hands and grab your broom just in time but as the match continues your team loses 130 to 220.", "emoji": "3️⃣" }
+        }
+    
+    
+    ]
+}
