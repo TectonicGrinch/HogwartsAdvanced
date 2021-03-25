@@ -4,7 +4,7 @@ const goodbean = require('../../json/goodbean.json');
 const badbean = require('../../json/badbean.json');
 module.exports.run = async (bot, message, args) => {
     
-    
+    let allItems = require('../../json/items/items.json')
     let itemName = "bertiebotts"
     let userDB = bot.db.get(message.author.id);
     let item = bot.config.shop[itemName]
@@ -16,9 +16,6 @@ module.exports.run = async (bot, message, args) => {
     if(!item || !userDB.inv.some(i => i.name == itemName)){
 
         message.channel.send(bot.embed(`you don't have any ${itemName} purchase some from the store to use this command.`))
-
-
-
 
     }else{
         switch(!flip){
