@@ -4,10 +4,10 @@ const goodbean = require('../../json/goodbean.json');
 const badbean = require('../../json/badbean.json');
 module.exports.run = async (bot, message, args) => {
     
-    let allItems = require('../../json/items/items.json')
+    let itemIndex = require('../../json/items/items.json')
     let itemName = "bertiebotts"
     let userDB = bot.db.get(message.author.id);
-    let item = bot.config.shop[itemName]
+    let item = itemIndex.allitems[itemName]
    
     let flip = Math.Floor(Math.random(1, 101));
     let goodbeant = util.dynamicgenerator(goodbean); 

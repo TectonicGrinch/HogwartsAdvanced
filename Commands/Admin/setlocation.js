@@ -9,7 +9,7 @@ module.exports.run = async (bot, message, args) => {
 
 
     if(!user){
-        message.channel.send(bot.emebd(`You did not mention someone.`))
+        message.channel.send(bot.embed(`You did not mention someone.`))
     }else{
 
         bot.db.set(user.id, { location: args1 })
