@@ -10,6 +10,7 @@
         "betakey": { "response": "use >betakey", "price": 5000000000, "description": "beta-key for all of those before the bot initial release", "infinite": true, "hidden": true },
         "knightbus ticket": { "response": "Catch the Knight Bus to Diagon Alley.", "price": 300, "description": "Ticket to diagon alley x1 use >location travel diagon alley", "infinite": false, "hidden": false, "location": "diagon alley" },
         "wand": { "response": "You hold up your wand", "price": 20, "description": "A wand for a starter wizard or maybe a replacement?", "infinite": false, "hidden": false},
+        "laughingpotion": {"response": "You examine the bottle of laughing potion it has a delightful aroma.", "price": 100, "description": "A draught of laughing potion PERFECT FOR PRANKS!", "infinite": true, "hidden": true},
         "emeraldheart": {"response": "You hold The Emerald Heart in your hand", "price": 100, "description": "A heart made of emerald", "infinite": true, "hidden": true},
         "sword of gryffindor": {"response": "You hold up The Sword of Gryffindor", "price": 10000000, "description": "Only a true gryffindor can pull the sword from the hat.", "infinite": true, "hidden": true}
 
