@@ -1,14 +1,17 @@
 const Discord = require('discord.js');
-const nerds = require('nerds');
+const util = require('../Util/utils');
 module.exports.run = async (bot, message, args) => {
 
 
+let items = require(`../json/chocolatefrogcards/chocolatecards.json`) 
 
+let itemR = util.rand(items)
+
+
+message.channel.send(bot.embed(`${itemR}`))
  
-    let promise = nerds.resolve('Harry Potter').asPromise();
-    for(var info in promise){
-        message.channel.send(info.first)
-    }
+
+
     
 
 }

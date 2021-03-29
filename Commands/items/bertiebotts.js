@@ -4,8 +4,6 @@ const invFuncs = require('../../Util/invFuncs')
 const goodbean = require('../../json/goodbean.json');
 const badbean = require('../../json/badbean.json');
 module.exports.run = async (bot, message, args) => {
-    
-
     let itemName = "bertiebotts"
     let item = invFuncs.invHasItem(message.author, itemName)
    
@@ -23,13 +21,11 @@ module.exports.run = async (bot, message, args) => {
         case (flip > 51):
 
         message.channel.send(bot.embed(`**${message.author}** ate a **${goodbeant}** flavoured bean 👼`).setColor('#1DD500'));
-
         break;
 
         case (flip < 50):
 
         message.channel.send(bot.embed(`**${message.author}** ate a **${badbeant}** flavoured bean 🤮`).setColor('#E50000'));
-
         break;
     }
     console.log(`${message.author.username} used >bertiebotts ${flip} ${goodbeant} ${badbeant}`);

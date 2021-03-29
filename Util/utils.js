@@ -97,6 +97,10 @@ function randomRoll(numOne, numTwo){
 
 
 }
+function rand(items) {
+    // "~~" for a closest "int"
+    return items[~~(items.length * Math.random())];
+}
 
 module.exports = {
     getFilesRecursive,
@@ -105,5 +109,6 @@ module.exports = {
     pagify,
     rolecheck,
     dynamicgenerator,
-    randomRoll
+    randomRoll,
+    rand
 }
