@@ -5,9 +5,11 @@ module.exports.run = async (bot, message, args) => {
     let locationUser = userDB.location
 
 
-    let locationshop;
+
     try {
-        locationShop = require(`../../json/location/shop/${locationUser}.json`)
+        let world = require(`../../json/world.json`)
+        let locationShop = world[`${locationUser}`]
+        console.log(locationShop)
         let amount = isNaN(args[0]) ? 1 : Number(args.shift())
         let itemName = args.join(' ').toLowerCase()
     
