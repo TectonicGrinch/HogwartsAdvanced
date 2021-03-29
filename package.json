@@ -1,7 +1,7 @@
 {
-  "name": "fiverr-order",
+  "name": "HogwartsBot",
   "version": "1.0.0",
-  "description": "unknown game calculator",
+  "description": "A themed discord bot based on the Harry Potter Universe",
   "main": "index.js",
   "dependencies": {
     "aki-api": "^5.2.1",
@@ -20,6 +20,6 @@
   "keywords": [
     "mp3"
   ],
-  "author": "Dalibor Trampota",
+  "author": "Jake Bartlett",
   "license": "MIT"
 }
