@@ -8,7 +8,7 @@ const bot = new Discord.Client();
 bot.db = require('quick.db')
 
 bot.config = require('./Config.json');
-bot.allitems = require('./json/items/items.json');
+bot.itemIndex = require('./json/items/items.json');
 bot.commands = new Discord.Collection();
 bot.aliases = new Discord.Collection();
 bot.cooldowns = new Discord.Collection();

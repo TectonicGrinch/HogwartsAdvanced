@@ -1,7 +1,9 @@
 const Discord = require('discord.js');
 const util = require('../../Util/utils');
 const trickarray = require(`../../json/broomtricks`);
-const londonShop = require('../../json/location/shop/london.json')
+
+const invFuncs = require(`../../Util/invFuncs`)
+
 
 module.exports.run = async (bot, message, args) => {
 
@@ -9,17 +11,16 @@ module.exports.run = async (bot, message, args) => {
     let london = "london";
     let godricshollow = "godrics hollow";
     let ministry = "ministry of magic";
-    //Code Start
+
 
     let args1 = args[0]
     let args2 = args[1]
 
     let itemName = "broomstick";
-
     let userDB = bot.db.get(message.author.id)
+    let item = invFuncs.invHasItem(message.author, itemName)
 
-    let item = bot.config.shop[itemName]
-    if(!item || !userDB.inv.some(i => i.name == itemName)){
+    if(!item){
         message.channel.send(bot.embed(`You don't have a broomstick`))
     }else{
 

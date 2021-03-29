@@ -1,13 +1,15 @@
 const Discord = require('discord.js');
+const invFuncs =require('../../Util/invFuncs');
 
 module.exports.run = async (bot, message, args) => {
     //Code Start
     let itemName = "elderwand";
 
     let userDB = bot.db.get(message.author.id);
-    let idx = userDB.inv.findIndex(i => i.name == itemName);
-    let item = bot.config.shop[itemName];
-    if(!item || !userDB.inv.some(i => i.name == itemName)){
+    let item = invFuncs.invHasItem(message.author, itemName)
+
+
+    if(!item){
 
   message.channel.send(bot.embed(`**You do not have The Elder Wand!**`));
 

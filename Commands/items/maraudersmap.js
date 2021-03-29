@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-const inventoryFuncs = require('../../Util/invFuncs')
+const invFuncs = require('../../Util/invFuncs')
 
 module.exports.run = async (bot, message, args) => {
     //Code Start
@@ -7,7 +7,7 @@ module.exports.run = async (bot, message, args) => {
     let itemName = 'maraudersmap';
     let userDB = bot.db.get(message.author.id);
  
-    let item = inventoryFuncs.invHasItem(user, itemName)
+    let item = invFuncs.invHasItem(user, itemName)
 
    
 
