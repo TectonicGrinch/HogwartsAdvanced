@@ -6,7 +6,6 @@ const bot = new Discord.Client();
 
 
 bot.db = require('quick.db')
-bot.SQLdb = require('sqlite3')
 
 bot.config = require('./Config.json');
 bot.allitems = require('./json/items/items.json');

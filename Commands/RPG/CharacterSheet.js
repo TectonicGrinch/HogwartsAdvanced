@@ -3,14 +3,12 @@ const Discord = require('discord.js');
 module.exports.run = async (bot, message, args) => {
 
     //Code Start
-    let pet = bot.db.get(message.author.id, 'petType')
     let user = message.mentions.users.first() || message.author;
     let fetchObj = bot.db.get(user.id)
     message.channel.send(bot.embed(`**Character Sheet**
     **Race:** ${fetchObj.race}
     **Bloodtype:** ${fetchObj.bloodType}
     **Special Attribute:** ${fetchObj.SpecialAttribute || 'none'}
-    **Pet**: ${pet}
     **Job:** ${fetchObj.job || 'Unemployed'}
     **Balance:** $${fetchObj.balance}`).setAuthor(`${user.username}'s Character`, user.avatarURL({dynamic: true})));
 	//Code End
