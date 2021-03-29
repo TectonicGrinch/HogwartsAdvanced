@@ -1,3 +1,4 @@
 /oldconfig.
 /node_modules
 /Config.json
+node_modules/yallist/yallist.js
