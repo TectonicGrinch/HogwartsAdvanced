@@ -7,7 +7,7 @@ module.exports.run = async (bot, message, args) => {
         return message.channel.send(bot.embed(bot.config.locations.join(',\n ')).setTitle('Locations'))
     
     let city = args.join(' ').toLowerCase()
-    let requiredItems = getRequiredItemsToTravelTo(city, bot.config.shop)
+    let requiredItems = getRequiredItemsToTravelTo(city, bot.itemIndex.allItems)
 
     let inv = bot.db.get(message.author.id).inv
 
