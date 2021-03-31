@@ -1,27 +1,17 @@
-const Discord = require('discord.js');
+const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
 
-    //Code Start
+	let user = message.author;
+	let locObj = bot.db.get(user.id) || {};
+	message.channel.send(bot.embed(`**${user.username}**Location: **${locObj.location || "undefined"}**`));
+	console.log(`${user} is located at ${locObj.location || "undefined"}`);
+};
 
-   let user = message.author;
-   let locObj = bot.db.get(user.id) || {};
-
-
-
-        
-        message.channel.send(bot.embed(`**${user.username}**
-        Location: **${locObj.location}**
-        ${locObj.location.description}`));
-
-
-	//Code End
-    console.log(`${user} is located at ${locObj.location}`)
-}
 
 module.exports.config = {
-    cmdPerms: ["EMBED_LINKS"],
-    command: "locate",
-    cooldown: 5, 
-	args: false
-}
+	cmdPerms: ["EMBED_LINKS"],
+	command: "locate",
+	cooldown: 5,
+	args: false,
+};

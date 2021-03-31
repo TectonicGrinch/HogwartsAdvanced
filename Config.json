@@ -27,8 +27,6 @@
 
     "specialAttribute":["Vampire", "Werewolf", "Animagus"],
 
-    "locations": ["London", "Diagon Alley", "Knockturn Alley", "Hogwarts", "Ministry of Magic", "Godrics Hollow"],
-   
     "rpgEncounter": [
         { 
             "title": "Dementor Attack", 

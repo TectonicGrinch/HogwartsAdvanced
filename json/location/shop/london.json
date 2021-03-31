@@ -1,6 +1,0 @@
-{
-"shop": {
-    "knightbus ticket": { "response": "Catch the Knight Bus to Diagon Alley.", "price": 300, "description": "Ticket to diagon alley x1 use >location travel diagon alley", "infinite": false, "hidden": false, "location": "diagon alley" }
-
- }
-}
