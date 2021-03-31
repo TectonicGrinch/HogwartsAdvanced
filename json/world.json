@@ -1,136 +1,219 @@
 {
-    "london": {
-        "name": "London", 
-        "description": "it london", 
-        "biome": "Urban", 
-        "shop": {
-            "knightbus ticket": { 
-                "response": "Catch the Knight Bus to Diagon Alley.", 
-                "price": 300, 
-                "description": "Ticket to diagon alley x1 use >location travel diagon alley", 
-                "infinite": false, 
-                "hidden": false, 
-                "location": "diagon alley" 
-            }
-        }, 
-        "petShop": []
-    },
-    "diagonalley": {
-        "name": "Diagon Alley", 
-        "description": "it Diagon Alley", 
-        "biome": "Urban",
-        "Shop": {
-            "broomstick": {
-                "response": "You hold out your broomstick use >broomstick for more", 
-                "price": 100, 
-                "description": "the basic broomstick for the standard witch or wizard.", 
-                "infinite": true, 
-                "hidden": false, 
-                "location": "london"
-            },
-            "bertiebotts": {
-                "response": "use >bertiebotts", 
-                "price": 100, 
-                "description": "They really mean EVERY. FLAVOUR.", 
-                "infinite": true, 
-                "hidden": false},
-            "floo powder": {
-                "response": "Use the Floo Network to get to Diagon Alley.", 
-                "price": 300, 
-                "description": "Powdery", 
-                "infinite": true, 
-                "hidden": false, 
-                "location": "diagon alley" 
-            },
-            "remembrall": {
-                "response": "The smoke turns red but what have you forgotten?", 
-                "price":20, 
-                "description": "Glows red when the user has forgotten something.", 
-                "infinite": true, 
-                "hidden": false
-            },
-            "elderwand": {
-                "response": "use >elderwand", 
-                "price": 5000000000, 
-                "description": "One of three deathly hallows, The Elder Wand (NOT INTENDED FOR PURCHASE)", 
-                "infinite": true, 
-                "hidden": true },
-            "maraudersmap": {
-                "response": "use >maraudersmap", 
-                "price": 5000000000, 
-                "description": "The Marauders Map (NOT INTENDED FOR PURCHASE)", 
-                "infinite": true, 
-                "hidden": true 
-            },
-            "wand": { 
-                "response": "You hold up your wand", 
-                "price": 20, 
-                "description": "A wand for a starter wizard or maybe a replacement?", 
-                "infinite": false, 
-                "hidden": false
-            },
-            "chocolatefrog": {
-                "response": "you hold up your chocolate frog", 
-                "price": 10, 
-                "description": "Made with %70 of the finest Croakoa can you collect all the cards?", 
-                "infinite": true, 
-                "hidden": false}
-        }, 
-        "rpgEncounter": [
-            { 
-            "title": "A Child In Need", 
-            "action": "You walk upon what appears to be a fight between two young wizards, The first wizard yells out\n GIVE IT BACK!\n the second wizard yells back OR WHAT!\n That was my Fathers! the first wizard yells.\n I don't care who's it was it belongs to me now said the second wizard.\n You approach the wizards and?\n 1. Snatch the item back off of the bully and give it back to the first wizard.\n2. Join in with the second wizard and bully the first wizard. \n 3. Walk away kids will be kids.", 
-            "option1": {
-                "chance": 0.8, 
-                "reward": { 
-                    "type": "money", 
-                    "value": 5 
-                    }, 
-                "successMessage": "The First wizard thanks you i don't have much to thank you with but here. The boy gives you $5 and runs away before the bully can follow.", 
-                "failMessage": "The bully dodges your hand and runs away with the item.", 
-                "emoji": "1️⃣" }, 
-            "option2": {
-                "chance": 0.5, 
-                "reward": { 
-                    "type": "nothing" 
-                    }, 
-                "successMessage": "You join in and bully the first wizard. After you are done dangling the first wizard from the nearby lamp post the second wizard thanks you for the help and then walks off into the distance.", 
-                "failMessage": "You go to help the bully but the bully ends up bullying both of you as you and the first wizard dangle from the lamp post you realise it wasnt wise to help the bully.", 
-                "emoji": "2️⃣" }, 
-            "option3": {
-                "chance": 1,
-                "reward": {
-                    "type": "nothing" 
-                    }, 
-                "successMessage": "You walk away and hear the first wizards screams,\n It will toughen him up atleast you think to yourself.", 
-                "failMessage": "You walk away.", 
-                "emoji": "3️⃣" }
-            }
-        ], 
-        "petShop": []
-    },
-    "knockturnalley": {
-        "name": "Knockturn Alley", 
-        "description": "it Knockturn Alley", 
-        "biome": "Urban", 
-        "petShop": []
-    },
-    "hogwarts": {
-        "name": "Hogwarts", 
-        "description": "it Hogwarts", 
-        "biome": "Urban", 
-        "petShop": []
-    },
-    "ministryofmagic": {
-        "name": "Ministry of Magic", 
-        "description": "it the Ministry of Magic", 
-        "biome": "Urban", 
-        "petShop": []
-    },
-    "godricshollow": {
-        "name": "Godrics Hollow", 
-        "description": "it Godrics Hollow", 
-        "biome": "Urban", 
-        "petShop": []
-    }
+	"london": {
+		"name": "London",
+		"description": "it london",
+		"biome": "Urban",
+		"shop": {
+			"knightbus ticket": {
+				"response": "Catch the Knight Bus to Diagon Alley.",
+				"price": 300,
+				"description": "Ticket to diagon alley x1 use >location travel diagon alley",
+				"infinite": false,
+				"hidden": false,
+				"location": "diagon alley"
+			}
+		},
+		"petShop": {
+			"owl": {
+        "name": "Owl",
+        "givenName": "",
+				"damage": 20,
+				"health": 60,
+				"cost": 150,
+				"type": "flying",
+				"id": "🦉"
+			},
+			"cat": {
+        "name": "Cat",
+        "givenName": "",
+				"damage": 30,
+				"health": 50,
+				"cost": 150,
+				"type": "swift",
+				"id": "🐱"
+			},
+			"toad": {
+        "name": "Toad",
+        "givenName": "",
+				"damage": 20,
+				"health": 60,
+				"cost": 150,
+				"type": "normal",
+				"id": "🐸"
+			}
+		}
+	},
+	"diagonalley": {
+		"name": "Diagon Alley",
+		"description": "it Diagon Alley",
+		"biome": "Urban",
+		"Shop": {
+			"broomstick": {
+				"response": "You hold out your broomstick use >broomstick for more",
+				"price": 100,
+				"description": "the basic broomstick for the standard witch or wizard.",
+				"infinite": true,
+				"hidden": false,
+				"location": "london"
+			},
+			"bertiebotts": {
+				"response": "use >bertiebotts",
+				"price": 100,
+				"description": "They really mean EVERY. FLAVOUR.",
+				"infinite": true,
+				"hidden": false
+			},
+			"floo powder": {
+				"response": "Use the Floo Network to get to Diagon Alley.",
+				"price": 300,
+				"description": "Powdery",
+				"infinite": true,
+				"hidden": false,
+				"location": "diagon alley"
+			},
+			"remembrall": {
+				"response": "The smoke turns red but what have you forgotten?",
+				"price": 20,
+				"description": "Glows red when the user has forgotten something.",
+				"infinite": true,
+				"hidden": false
+			},
+			"elderwand": {
+				"response": "use >elderwand",
+				"price": 5000000000,
+				"description": "One of three deathly hallows, The Elder Wand (NOT INTENDED FOR PURCHASE)",
+				"infinite": true,
+				"hidden": true
+			},
+			"maraudersmap": {
+				"response": "use >maraudersmap",
+				"price": 5000000000,
+				"description": "The Marauders Map (NOT INTENDED FOR PURCHASE)",
+				"infinite": true,
+				"hidden": true
+			},
+			"wand": {
+				"response": "You hold up your wand",
+				"price": 20,
+				"description": "A wand for a starter wizard or maybe a replacement?",
+				"infinite": false,
+				"hidden": false
+			},
+			"chocolatefrog": {
+				"response": "you hold up your chocolate frog",
+				"price": 10,
+				"description": "Made with %70 of the finest Croakoa can you collect all the cards?",
+				"infinite": true,
+				"hidden": false
+			}
+		},
+		"rpgEncounter": [
+			{
+				"title": "A Child In Need",
+				"action": "You walk upon what appears to be a fight between two young wizards, The first wizard yells out\n GIVE IT BACK!\n the second wizard yells back OR WHAT!\n That was my Fathers! the first wizard yells.\n I don't care who's it was it belongs to me now said the second wizard.\n You approach the wizards and?\n 1. Snatch the item back off of the bully and give it back to the first wizard.\n2. Join in with the second wizard and bully the first wizard. \n 3. Walk away kids will be kids.",
+				"option1": {
+					"chance": 0.8,
+					"reward": {
+						"type": "money",
+						"value": 5
+					},
+					"successMessage": "The First wizard thanks you i don't have much to thank you with but here. The boy gives you $5 and runs away before the bully can follow.",
+					"failMessage": "The bully dodges your hand and runs away with the item.",
+					"emoji": "1️⃣"
+				},
+				"option2": {
+					"chance": 0.5,
+					"reward": {
+						"type": "nothing"
+					},
+					"successMessage": "You join in and bully the first wizard. After you are done dangling the first wizard from the nearby lamp post the second wizard thanks you for the help and then walks off into the distance.",
+					"failMessage": "You go to help the bully but the bully ends up bullying both of you as you and the first wizard dangle from the lamp post you realise it wasnt wise to help the bully.",
+					"emoji": "2️⃣"
+				},
+				"option3": {
+					"chance": 1,
+					"reward": {
+						"type": "nothing"
+					},
+					"successMessage": "You walk away and hear the first wizards screams,\n It will toughen him up atleast you think to yourself.",
+					"failMessage": "You walk away.",
+					"emoji": "3️⃣"
+				}
+			}
+		],
+		"petShop": {
+			"cat": {
+        "name": "Cat",
+        "givenName": "",
+				"damage": 30,
+				"health": 50,
+				"cost": 150,
+				"type": "swift",
+				"id": "🐱"
+			}
+		}
+	},
+	"knockturnalley": {
+		"name": "Knockturn Alley",
+		"description": "it Knockturn Alley",
+		"biome": "Urban",
+		"petShop": {
+			"toad": {
+        "name": "Toad",
+        "givenName": "",
+				"damage": 20,
+				"health": 60,
+				"cost": 150,
+				"type": "normal",
+				"id": "🐸"
+			}
+		}
+	},
+	"hogwarts": {
+		"name": "Hogwarts",
+		"description": "it Hogwarts",
+		"biome": "Urban",
+		"petShop": {
+			"owl": {
+        "name": "Owl",
+        "givenName": "",
+				"damage": 20,
+				"health": 60,
+				"cost": 150,
+				"type": "flying",
+				"id": "🦉"
+			},
+			"cat": {
+        "name": "Cat",
+        "givenName": "",
+				"damage": 30,
+				"health": 50,
+				"cost": 150,
+				"type": "swift",
+				"id": "🐱"
+			}
+		}
+	},
+	"ministryofmagic": {
+		"name": "Ministry of Magic",
+		"description": "it the Ministry of Magic",
+		"biome": "Urban",
+		"petShop": {
+			"owl": {
+        "name": "Owl",
+        "givenName": "",
+				"damage": 20,
+				"health": 60,
+				"cost": 150,
+				"type": "flying",
+				"id": "🦉"
+			}
+		}
+	},
+	"godricshollow": {
+		"name": "Godrics Hollow",
+		"description": "it Godrics Hollow",
+		"biome": "Urban",
+		"petShop": {}
+	}
 }
