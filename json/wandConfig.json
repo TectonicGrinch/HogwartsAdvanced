@@ -1,5 +1,25 @@
 {
-	"wandcore": ["Unicorn Hair", "Dragon Heartstring", "Phoenix Feather"],
+	"wandcore": [
+		"Unicorn Tail Hair",
+		"Dragon Heartstring",
+		"Phoenix Feather",
+		"Veela hair",
+		"Thestral Tail hair",
+		"Troll whisker",
+		"Coral",
+		"Dittany Stalk",
+		"Thunderbird Tail Feather",
+		"Wampus Cat Hair",
+		"White River Monster Spine",
+		"Rougarou Hair",
+		"Horned Serpent Horn",
+		"Snallygaster Heartstring",
+		"Jackalope Antler",
+		"Kneazle Whisker",
+		"Kelpie Hair",
+		"Curupira hair"
+	
+	],
 	"wandsize": ["9", "9'5", "10", "10'5", "11", "11'5", "12", "12'5", "13", "13'5", "14"],
 	"wandwood": [
 		"Acacia",

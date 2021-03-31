@@ -1,15 +1,14 @@
 const Discord = require('discord.js');
 const util = require('../../Util/utils');
 const invFuncs = require('../../Util/invFuncs')
-const goodbean = require('../../json/goodbean.json');
-const badbean = require('../../json/badbean.json');
+const bertiebotts = require('../../json/bertieBeans.json')
 module.exports.run = async (bot, message, args) => {
     let itemName = "bertiebotts"
     let item = invFuncs.invHasItem(message.author, itemName)
-   
-    let flip = Math.Floor(Math.random(1, 101));
-    let goodbeant = util.dynamicgenerator(goodbean); 
-    let badbeant = util.dynamicgenerator(badbean);
+
+    let flip = Math.floor(Math.random() * 100) + 1;;
+    let goodbeant = util.dynamicgenerator(bertiebotts.goodbean); 
+    let badbeant = util.dynamicgenerator(bertiebotts.badbean);
    
     if(!item){
 
