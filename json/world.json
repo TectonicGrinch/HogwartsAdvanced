@@ -20,7 +20,7 @@
 		"name": "Diagon Alley",
 		"description": "it Diagon Alley",
 		"biome": "Urban",
-		"Shop": {
+		"shop": {
 			"broomstick": {
 				"response": "You hold out your broomstick use >broomstick for more",
 				"price": 100,

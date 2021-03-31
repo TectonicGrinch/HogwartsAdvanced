@@ -11,7 +11,7 @@ module.exports.run = async (bot, message, args) => {
 
     //Code Start
     let aurorEncounters = encounters.jobEncounters.auror
-    let encounter = aurorEncounters[Math.floor(Math.random() * Object.keys(aurorEncounters).length)]
+    let encounter = aurorEncounters[Object.keys(aurorEncounters)[Math.floor(Math.random() * Object.keys(aurorEncounters).length)]]
 
     const encounterEmbed = new Discord.MessageEmbed()
         .setTitle(encounter.title)

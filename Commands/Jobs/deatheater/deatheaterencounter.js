@@ -11,7 +11,7 @@ module.exports.run = async (bot, message, args) => {
 
     //Code Start
     let deatheaterencounters =  encounters.jobEncounters.deatheater
-    let encounter = deatheaterencounters[Math.floor(Math.random() * Object.keys(deatheaterencounters).length)]
+    let encounter = deatheaterencounters[Object.keys(deatheaterencounters)[Math.floor(Math.random() * Object.keys(deatheaterencounters).length)]]
 
     const encounterEmbed = new Discord.MessageEmbed()
         .setTitle(encounter.title)

@@ -6,7 +6,7 @@ module.exports.run = async (bot, message, args) => {
 
     //Code Start
     let quidditchEncounters = encounters.jobEncounters.quidditchstar
-    let encounter = quidditchEncounters[Math.floor(Math.random() * Object.keys(quidditchEncounters).length)]
+    let encounter = quidditchEncounters[Object.keys(quidditchEncounters)[Math.floor(Math.random() * Object.keys(quidditchEncounters).length)]]
 
 
 
