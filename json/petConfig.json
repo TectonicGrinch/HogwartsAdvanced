@@ -1,0 +1,35 @@
+{
+	"generalPets": [],
+	"locationalPets": {
+		"owl": {
+			"name": "Owl",
+			"givenName": "",
+			"damage": 20,
+			"health": 60,
+			"cost": 150,
+			"type": "flying",
+			"id": "🦉",
+			"locationsAvailable": ["london", "hogwarts", "ministryofmagic"]
+		},
+		"cat": {
+			"name": "Cat",
+			"givenName": "",
+			"damage": 30,
+			"health": 50,
+			"cost": 150,
+			"type": "swift",
+			"id": "🐱",
+			"locationsAvailable": ["london", "diagonalley", "hogwarts"]
+		},
+		"toad": {
+			"name": "Toad",
+			"givenName": "",
+			"damage": 20,
+			"health": 60,
+			"cost": 150,
+			"type": "normal",
+			"id": "🐸",
+			"locationsAvailable": ["london", "knockturnalley"]
+		}
+	}
+}

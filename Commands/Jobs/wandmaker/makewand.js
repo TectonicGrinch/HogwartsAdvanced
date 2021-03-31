@@ -1,9 +1,6 @@
 const Discord = require('discord.js');
-const wandwood = require('../../../json/wandwood.json');
-const wandcore = require('../../../json/wandcore.json');
-const wandsize = require('../../../json/wandsize.json'); 
+const wand = require('../../../json/wandConfig.json');
 const npcreply = require('../../../json/npcjobreplies.json')
-const hours = require('../../../json/hours.json')
 const util = require('../../../Util/utils.js')
 const REQUIRED_JOB = "wandmaker"
 
@@ -17,11 +14,11 @@ module.exports.run = async (bot, message, args) => {
     let reward = Math.floor(Math.random() * (userDB.job.max - userDB.job.min) + userDB.job.min)
     bot.db.add(`${message.author.id}.balance`, reward);
 
-let wandwoodt = util.dynamicgenerator(wandwood) 
-let wandcoret = util.dynamicgenerator(wandcore) 
-let wandsizet = util.dynamicgenerator(wandsize)  
+let wandwoodt = util.dynamicgenerator(wand.wandwood) 
+let wandcoret = util.dynamicgenerator(wand.wandcore) 
+let wandsizet = util.dynamicgenerator(wand.wandsize)  
 let npcreplyt = util.dynamicgenerator(npcreply)  
-let hourst = util.dynamicgenerator(hours)
+let hourst = util.dynamicgenerator(wand.hoursRequired)
 
 //console.log("wood type = ${wandwoodT}")
 console.log(`WandGenerated: Username:${message.author.username} Wood:${wandwoodt} Wand core:${wandcoret} Wand size:${wandsizet} Hours to make:${hourst} Amount Earned:${reward}`)

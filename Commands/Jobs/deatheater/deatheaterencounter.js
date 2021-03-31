@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const util = require('../../../Util/utils.js');
-const deatheaterencounters = require(`../../../json/encounters/deatheaterencounters.json`)
+const encounters = require(`../../../json/encounterConfig.json`);
 const REQUIRED_JOB = "death eater"
 module.exports.run = async (bot, message, args) => {
     //Commmand to teach a random class in an array
@@ -10,7 +10,8 @@ module.exports.run = async (bot, message, args) => {
         return message.channel.send(bot.embed(`You can\'t use this command. ${REQUIRED_JOB ? `You need to work as a ${REQUIRED_JOB}` : `You don't have a job.`}`))
 
     //Code Start
-    let encounter = deatheaterencounters.rpgEncounter[Math.floor(Math.random() * deatheaterencounters.rpgEncounter.length)]
+    let deatheaterencounters =  encounters.jobEncounters.deatheater
+    let encounter = deatheaterencounters[Math.floor(Math.random() * Object.keys(deatheaterencounters).length)]
 
     const encounterEmbed = new Discord.MessageEmbed()
         .setTitle(encounter.title)

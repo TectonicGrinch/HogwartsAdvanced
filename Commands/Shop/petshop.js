@@ -32,7 +32,7 @@ module.exports.run = async (bot, message, args) => {
 		const filter = (r, u) =>
 			u.id == message.author.id && (r.emoji.name == "🦉" || r.emoji.name == "🐱" || r.emoji.name == "🐸");
 
-    // current bug is if user travels to new area (where no pets available) before buying a pet an error will occur
+		// current bug is if user travels to new area (where no pets available) before buying a pet an error will occur
 		msg.awaitReactions(filter, { time: 60000, max: 1 }).then((collected) => {
 			let emoji = collected.first().emoji.name;
 
@@ -58,7 +58,7 @@ module.exports.run = async (bot, message, args) => {
 // grabs pets available based on location
 // TODO: add pets available everywhere and merge with locational ones here
 function findPets(location, world) {
-	let ret =[];
+	let ret = [];
 	for (pet in world[`${location}`].petShop) {
 		ret.push(world[`${location}`].petShop[`${pet}`]);
 	}
@@ -66,7 +66,7 @@ function findPets(location, world) {
 }
 // turns list of pets into formatted string
 function listPets(allPets) {
-	let ret = '';
+	let ret = "";
 	for (i in allPets) {
 		let pet = allPets[i];
 		ret += `\n**${pet.name}** ${pet.id} \nHealth: ${pet.health}\nDamage: ${pet.damage}`;

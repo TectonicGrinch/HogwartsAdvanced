@@ -7,8 +7,9 @@ module.exports.run = async (bot, message, args) => {
 
 	try {
 		let world = require(`../../json/world.json`);
-		locationEncounter = world[`${locationUser}`].rpgEncounter;
-		let encounter = locationEncounter[Math.floor(Math.random() * locationEncounter.rpgEncounter.length)];
+		let locationEncounters = world[`${locationUser}`].encounters;
+    console.log(Object.keys(locationEncounters).length)
+		let encounter = locationEncounters[Math.floor(Math.random() * Object.keys(locationEncounters).length)];
 		const encounterEmbed = new Discord.MessageEmbed()
 			.setTitle(encounter.title)
 			.setDescription(encounter.action)
