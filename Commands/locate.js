@@ -11,7 +11,8 @@ module.exports.run = async (bot, message, args) => {
 
         
         message.channel.send(bot.embed(`**${user.username}**
-        Location: **${locObj.location}**`));
+        Location: **${locObj.location}**
+        ${locObj.location.description}`));
 
 
 	//Code End
