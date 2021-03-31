@@ -13,35 +13,8 @@
 				"location": "diagon alley"
 			}
 		},
-		"petShop": {
-			"owl": {
-        "name": "Owl",
-        "givenName": "",
-				"damage": 20,
-				"health": 60,
-				"cost": 150,
-				"type": "flying",
-				"id": "🦉"
-			},
-			"cat": {
-        "name": "Cat",
-        "givenName": "",
-				"damage": 30,
-				"health": 50,
-				"cost": 150,
-				"type": "swift",
-				"id": "🐱"
-			},
-			"toad": {
-        "name": "Toad",
-        "givenName": "",
-				"damage": 20,
-				"health": 60,
-				"cost": 150,
-				"type": "normal",
-				"id": "🐸"
-			}
-		}
+    "encounters": {},
+		"petShop": {}
 	},
 	"diagonalley": {
 		"name": "Diagon Alley",
@@ -107,113 +80,35 @@
 				"hidden": false
 			}
 		},
-		"rpgEncounter": [
-			{
-				"title": "A Child In Need",
-				"action": "You walk upon what appears to be a fight between two young wizards, The first wizard yells out\n GIVE IT BACK!\n the second wizard yells back OR WHAT!\n That was my Fathers! the first wizard yells.\n I don't care who's it was it belongs to me now said the second wizard.\n You approach the wizards and?\n 1. Snatch the item back off of the bully and give it back to the first wizard.\n2. Join in with the second wizard and bully the first wizard. \n 3. Walk away kids will be kids.",
-				"option1": {
-					"chance": 0.8,
-					"reward": {
-						"type": "money",
-						"value": 5
-					},
-					"successMessage": "The First wizard thanks you i don't have much to thank you with but here. The boy gives you $5 and runs away before the bully can follow.",
-					"failMessage": "The bully dodges your hand and runs away with the item.",
-					"emoji": "1️⃣"
-				},
-				"option2": {
-					"chance": 0.5,
-					"reward": {
-						"type": "nothing"
-					},
-					"successMessage": "You join in and bully the first wizard. After you are done dangling the first wizard from the nearby lamp post the second wizard thanks you for the help and then walks off into the distance.",
-					"failMessage": "You go to help the bully but the bully ends up bullying both of you as you and the first wizard dangle from the lamp post you realise it wasnt wise to help the bully.",
-					"emoji": "2️⃣"
-				},
-				"option3": {
-					"chance": 1,
-					"reward": {
-						"type": "nothing"
-					},
-					"successMessage": "You walk away and hear the first wizards screams,\n It will toughen him up atleast you think to yourself.",
-					"failMessage": "You walk away.",
-					"emoji": "3️⃣"
-				}
-			}
-		],
-		"petShop": {
-			"cat": {
-        "name": "Cat",
-        "givenName": "",
-				"damage": 30,
-				"health": 50,
-				"cost": 150,
-				"type": "swift",
-				"id": "🐱"
-			}
-		}
+		"encounters": {},
+		"petShop": {}
 	},
 	"knockturnalley": {
 		"name": "Knockturn Alley",
 		"description": "it Knockturn Alley",
 		"biome": "Urban",
-		"petShop": {
-			"toad": {
-        "name": "Toad",
-        "givenName": "",
-				"damage": 20,
-				"health": 60,
-				"cost": 150,
-				"type": "normal",
-				"id": "🐸"
-			}
-		}
+    "encounters": {},
+		"petShop": {}
 	},
 	"hogwarts": {
 		"name": "Hogwarts",
 		"description": "it Hogwarts",
 		"biome": "Urban",
-		"petShop": {
-			"owl": {
-        "name": "Owl",
-        "givenName": "",
-				"damage": 20,
-				"health": 60,
-				"cost": 150,
-				"type": "flying",
-				"id": "🦉"
-			},
-			"cat": {
-        "name": "Cat",
-        "givenName": "",
-				"damage": 30,
-				"health": 50,
-				"cost": 150,
-				"type": "swift",
-				"id": "🐱"
-			}
-		}
+    "encounters": {},
+		"petShop": {}
 	},
 	"ministryofmagic": {
 		"name": "Ministry of Magic",
 		"description": "it the Ministry of Magic",
 		"biome": "Urban",
-		"petShop": {
-			"owl": {
-        "name": "Owl",
-        "givenName": "",
-				"damage": 20,
-				"health": 60,
-				"cost": 150,
-				"type": "flying",
-				"id": "🦉"
-			}
-		}
+    "encounters": {},
+		"petShop": {}
 	},
 	"godricshollow": {
 		"name": "Godrics Hollow",
 		"description": "it Godrics Hollow",
 		"biome": "Urban",
+    "encounters": {},
 		"petShop": {}
 	}
 }

@@ -1,11 +1,12 @@
 const Discord = require('discord.js');
 
 module.exports.run = async (bot, message, args) => {
-    let quidditchEncounters = require('../../../json/encounters/quidditchencounters.json')
-    let allitem = require('../../../json/items/items.json')
+  const encounters = require(`../../../json/encounterConfig.json`);
+  let allitem = require('../../../json/items/items.json')
 
     //Code Start
-    let encounter = quidditchEncounters.rpgEncounter[Math.floor(Math.random() * bot.config.rpgEncounter.length)]
+    let quidditchEncounters = encounters.jobEncounters.quidditchstar
+    let encounter = quidditchEncounters[Math.floor(Math.random() * Object.keys(quidditchEncounters).length)]
 
 
 

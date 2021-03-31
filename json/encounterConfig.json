@@ -1,0 +1,139 @@
+{
+	"generalEncounters": {
+		"dementorattack": {
+			"title": "Dementor Attack",
+			"action": "You come across a dementor you feel the air around you turn stale and emotionless it starts approaching you the air around you grows colder what do you do? \n1. reach for your wand and cast a Patronus \n2. Run for you life. \n3. Dont react and hope it passes you.",
+			"option1": {
+				"chance": 0.8,
+				"reward": { "type": "money", "value": 50 },
+				"successMessage": "You fended off the dementor successfully and it flees, you gained **$50** from what appears to be a pouch near where the dementor fled.",
+				"failMessage": "you lost focus on your happy memory and failed the spell luckily the dementor fled for unkown reasons.",
+				"emoji": "1️⃣"
+			},
+			"option2": {
+				"chance": 0.5,
+				"reward": { "type": "nothing" },
+				"successMessage": "You manage to escape the dementor and are freed of its presence, The air around you feels fresher",
+				"failMessage": "You run as fast as you can but it is like running in a dream the dementor catches up to you turn and faint under the dementor's kiss when you awake nothing is around but you feel depressive.",
+				"emoji": "2️⃣"
+			},
+			"option3": {
+				"chance": 0.5,
+				"reward": { "type": "nothing" },
+				"successMessage": "You stand still and the dementor starts to attack you, What were you thinking? Luckily a bystander saw the attack and steps in to save you.",
+				"failMessage": "The dementor flies past you it must of been hunting bigger game. *Phew",
+				"emoji": "3️⃣"
+			}
+		},
+		"pieceofparchment": {
+			"title": "An Old Piece Of Parchment",
+			"action": "You are walking down a street and see a piece of old parchment laying between some rocks you seem intrigued and approach it,\n upon inspection it looks to be something a magical person has made but appears empty what will you do with it? \n1. Put it back someone might be looking for it. \n2. Take it for yourself, Finders Keepers  \n3. Try and find the owner.",
+			"option1": {
+				"chance": 0.8,
+				"reward": { "type": "nothing" },
+				"successMessage": "You put it back and walk away, it was probably rubbish anyway.",
+				"failMessage": "You put it back and walk away off in the distance you see someone approach it and hold their wand up to it maybe they were writing something?",
+				"emoji": "1️⃣"
+			},
+			"option2": {
+				"chance": 0.3,
+				"reward": { "type": "item", "value": "maraudersmap" },
+				"successMessage": "you stash the item in your cloak and recieve The Marauders Map",
+				"failMessage": "You attempt to stash the item but hear Petrificus Totalus! from behind you, it must be the original owner they have frozen you and taken the parchment back. As they walk off they glare back at you and call you a thief.",
+				"emoji": "2️⃣"
+			},
+			"option3": {
+				"chance": 0.9,
+				"reward": { "type": "money", "value": 20 },
+				"successMessage": "You look around for the original owner and find them they say that they left it there because they thought they had hidden it well under a spell they thought wrong... They pay you $20 for the trouble and thank you for returning it to them and not taking it.",
+				"failMessage": "You look everywhere but can't find the owner of the parchment, you put it back and continue forward.",
+				"emoji": "3️⃣"
+			}
+		}
+	},
+	"locationalEncounters": {
+		"childinneed": {
+			"title": "A Child In Need",
+			"action": "You walk upon what appears to be a fight between two young wizards, The first wizard yells out\n GIVE IT BACK!\n the second wizard yells back OR WHAT!\n That was my Fathers! the first wizard yells.\n I don't care who's it was it belongs to me now said the second wizard.\n You approach the wizards and?\n 1. Snatch the item back off of the bully and give it back to the first wizard.\n2.Join in with the second wizard and bully the first wizard. \n3. Walk away kids will be kids.",
+			"option1": {
+				"chance": 0.8,
+				"reward": { "type": "money", "value": 5 },
+				"successMessage": "The First wizard thanks you i don't have much to thank you with but here. The boy gives you $5 and runs away before the bully can follow.",
+				"failMessage": "The bully dodges your hand and runs away with the item.",
+				"emoji": "1️⃣"
+			},
+			"option2": {
+				"chance": 0.5,
+				"reward": { "type": "nothing" },
+				"successMessage": "You join in and bully the first wizard. After you are done dangling the first wizard from the nearby lamp post the second wizard thanks you for the help and then walks off into the distance.",
+				"failMessage": "You go to help the bully but the bully ends up bullying both of you as you and the first wizard dangle from the lamp post you realise it wasnt wise to help the bully.",
+				"emoji": "2️⃣"
+			},
+			"option3": {
+				"chance": 1,
+				"reward": { "type": "nothing" },
+				"successMessage": "You walk away and hear the first wizards screams,\n It will toughen him up atleast you think to yourself.",
+				"failMessage": "You walk away.",
+				"emoji": "3️⃣"
+			},
+			"locationsAvailable": ["diagonalley"]
+		}
+	},
+	"jobEncounters": {
+		"auror": {
+			"1": {
+				"title": "Death Eater Attack!",
+				"action": "On your patrol around diagon alley you notice a fight has broken out between two wizards as you approach the wizards you realise that one is carrying the black cloak and mask of a death eater what will you do?\n 1. Initiate a fight against the dark wizard\n2.Focus on protecting the civillian \n3. Just walk away nothing good will come of this",
+				"option1": {
+					"chance": 1,
+					"reward": { "type": "money", "value": 5 },
+					"successMessage": " ",
+					"failMessage": " ",
+					"emoji": "1️⃣"
+				},
+				"option2": {
+					"chance": 0.5,
+					"reward": { "type": "nothing" },
+					"successMessage": " ",
+					"failMessage": " ",
+					"emoji": "2️⃣"
+				},
+				"option3": {
+					"chance": 1,
+					"reward": { "type": "nothing" },
+					"successMessage": " ",
+					"failMessage": " ",
+					"emoji": "3️⃣"
+				}
+			}
+		},
+		"quidditchstar": {
+			"1": {
+				"title": "Order of Merlin VS Bulgaria",
+				"action": "The match commences after some time the Score is Order of Merlin 110 and Bulgaria 130 you being the team seeker are free game for the beaters you see two people fly towards you with bats in hand but just underthem the golden snitch zooms by what do you choose? \n1. Fly towards them and drop in hopes of catching the snitch. \n2. Alert your team of their presence and focus on getting away. \n3. Draw them closer and attempt a risky maneuver.",
+				"option1": {
+					"chance": 0.4,
+					"reward": { "type": "money", "value": 500 },
+					"successMessage": "You managed to dive right before they were planning to take you out and you also caught the golden snitch YOUR TEAM WINS!",
+					"failMessage": "You flew towards their beaters but they knocked you out of the game right before you dived... Bad luck...",
+					"emoji": "1️⃣"
+				},
+				"option2": {
+					"chance": 0.5,
+					"reward": { "type": "money", "value": 250 },
+					"successMessage": "You yell out to your team for help and your team beaters come to your rescue as an added bonus you also stumble across the golden snitch and manage to catch it for your team YOUR TEAM WINS!",
+					"failMessage": "You yell out to your team but the sound of the match covers your voice you turn to see a bludger coming at your face. You wake up in an infirmary your team lost but atleast they left some get well soon cards by your bed.",
+					"emoji": "2️⃣"
+				},
+				"option3": {
+					"chance": 0.2,
+					"reward": { "type": "money", "value": 5000 },
+					"successMessage": "You managed to do a risky maneuver you swirved under the bludger and dived inbetween the beaters whilst catching the golden snitch YOUR TEAM WINS! And your team sponser provided your team extra funding for your skill.",
+					"failMessage": "You attempted the risky maneuver and failed your broom lost control and you fell off it. luckily enough you find your hands and grab your broom just in time but as the match continues your team loses 130 to 220.",
+					"emoji": "3️⃣"
+				}
+			}
+		},
+		"deatheater": {}
+	}
+}
