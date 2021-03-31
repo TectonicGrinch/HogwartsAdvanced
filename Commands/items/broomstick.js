@@ -22,16 +22,8 @@ module.exports.run = async (bot, message, args) => {
         for (place in world) {
           if (place == location) {
             bot.db.set(`${message.author.id}.location`, place);
-            message.channel.send(
-              bot.embed(
-                `${message.author} Used their broomstick to travel to ${
-                  world[`${place}`].name
-                }.`
-              )
-            );
-            console.log(
-              `${message.author.username} has travelled from ${userDB.location} to ${place}`
-            );
+            message.channel.send(bot.embed(`${message.author} Used their broomstick to travel to ${world[`${place}`].name}.`));
+            console.log(`${message.author.username} has travelled from ${userDB.location} to ${place}`);
             break;
           }
         }
@@ -40,23 +32,17 @@ module.exports.run = async (bot, message, args) => {
         let flip = Math.floor(Math.random(1 * 101));
         switch (!mention) {
           case flip > 51:
-            message.channel.send(
-              bot.embed(`You race ${mention || `a random`} and placed **1st**`)
-            );
+            message.channel.send(bot.embed(`You race ${mention || `a random`} and placed **1st**`));
             break;
 
           case flip < 50:
-            message.channel.send(
-              bot.embed(`You race ${mention || `a random`} and placed **last**`)
-            );
+            message.channel.send(bot.embed(`You race ${mention || `a random`} and placed **last**`));
             break;
         }
         break;
       case "trick":
         let trick = util.dynamicgenerator(trickarray);
-        message.channel.send(
-          `You decide to do a trick on your broom you do a **${trick}**.`
-        );
+        message.channel.send(`You decide to do a trick on your broom you do a **${trick}**.`);
         break;
 
       default:
