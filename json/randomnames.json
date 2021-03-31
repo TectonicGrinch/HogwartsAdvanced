@@ -1,10 +1,22 @@
-[
-    "Ernie Swigglesworts",
-    "Darius Barnaby",
-    "Hugo Mulchkiss",
-    "Ernest Farthington",
-    "Henry Guggenheim",
-    "William Turpentine",
-    "Danby Danbysson",
-    "Serposapha Jimere"
-]
+{
+	"firstNames": [
+    "Ernie", 
+    "Darius", 
+    "Hugo", 
+    "Ernest", 
+    "Henry", 
+    "William", 
+    "Danby", 
+    "Serposapha"
+  ],
+	"lastNames": [
+		"Swigglesworts",
+		"Barnaby",
+		"Mulchkiss",
+		"Farthington",
+		"Guggenheim",
+		"Turpentine",
+		"Danbysson",
+		"Jimere"
+	]
+}
