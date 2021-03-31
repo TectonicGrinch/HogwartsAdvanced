@@ -12,7 +12,8 @@
                 "hidden": false, 
                 "location": "diagon alley" 
             }
-        }
+        }, 
+        "petShop": []
     },
     "diagonalley": {
         "name": "Diagon Alley", 
@@ -105,26 +106,31 @@
                 "failMessage": "You walk away.", 
                 "emoji": "3️⃣" }
             }
-        ]
+        ], 
+        "petShop": []
     },
     "knockturnalley": {
         "name": "Knockturn Alley", 
         "description": "it Knockturn Alley", 
-        "biome": "Urban"
+        "biome": "Urban", 
+        "petShop": []
     },
     "hogwarts": {
         "name": "Hogwarts", 
         "description": "it Hogwarts", 
-        "biome": "Urban"
+        "biome": "Urban", 
+        "petShop": []
     },
     "ministryofmagic": {
         "name": "Ministry of Magic", 
         "description": "it the Ministry of Magic", 
-        "biome": "Urban"
+        "biome": "Urban", 
+        "petShop": []
     },
     "godricshollow": {
         "name": "Godrics Hollow", 
         "description": "it Godrics Hollow", 
-        "biome": "Urban"
+        "biome": "Urban", 
+        "petShop": []
     }
 }
