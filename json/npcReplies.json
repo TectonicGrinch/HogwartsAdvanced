@@ -1,0 +1,28 @@
+{
+    "goodJobReply":
+       [
+        "Thank you.",
+        "Thanks alot.",
+        "My son will love this!",
+        "My daughter will love this!",
+        "It's just like my old one thank you.",
+        "I won't break this one i promise.",
+        "THIS LOOKS AMAZING!!!",
+        "This will make a great present!",
+        "I shall make great use of it."
+        ],
+
+    "badJobReply":[
+        "What even is this?",
+        "This isn't what i wanted..."
+
+
+    ],
+
+    "okayJobReply":[
+        "I suppose it'll do.",
+        "Thank you i guess..."
+    ]
+
+}
+
