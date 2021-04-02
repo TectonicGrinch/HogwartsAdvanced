@@ -1,0 +1,18 @@
+{
+petHealth: pet.health example: this dog's health is 50
+petDamage: pet.damage example: This dog's damage is 20
+petLevel: pet.level example: This dogs lvl is 5
+petGivenName: pet.givenName example: this dog's name is Fluffers
+petType: pet.type example: this dog is a canine type
+petAnimal: pet.animal example: this is a dog
+petBreed: pet.breed example: this is a pug a breed of dog
+petDesc: pet.desc example: this is a dog with the breed pug
+pet.moves['peck', 'fly', 'heal', 'swipe'] 
+}
+
+
+
+pet.moves['peck', 'fly', 'heal', 'swipe'] 
+//pet moves example
+
+moves

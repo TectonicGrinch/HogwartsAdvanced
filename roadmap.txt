@@ -1,10 +1,11 @@
 ROADMAP
 
 Initial Release:
-jobs with 3 commands each.
-travel complete.
-deathly hallows.
-3-5 encounters per job.
+jobs with 3 commands each. Encounters, Custom command, (insert amazing idea here)
+travel system complete. Checkaroni
+
+3-5 encounters per job. Hardest Shit
+
 locational encounters 1-3 each.
 
 
@@ -16,3 +17,5 @@ classes.
 scoring system for graduation.
 block money for students.
 make people start as students.
+
+
