@@ -18,7 +18,9 @@ module.exports.run = async (bot, message, args) => {
     
 	message.channel.send(bot.embed(`**${user.username}** 
 	Location: **${locObj.location || "undefined"}**`));
+	
 	console.log(`${user} is located at ${locObj.location || "undefined"}`);
+	
 	if(command){
 		switch(command){
 			case 'list':
