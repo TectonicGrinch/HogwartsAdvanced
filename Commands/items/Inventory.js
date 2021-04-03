@@ -6,10 +6,10 @@ module.exports.run = async (bot, message, args) => {
     //Code Start
     if(args[0]?.toLowerCase() == 'show'){
         args.shift()
-        items = require('../../json/items/items.json')
+        let items = require('../../json/items/items.json')
         let itemName = args.join(' ').toLowerCase()
         let userDB = bot.db.get(message.author.id)
-        let item = items.allitems[itemName]
+        let item = items[itemName]
     
         if(!item || !userDB.inv.some(i => i.name == itemName))
             return message.channel.send(bot.embed('No item exists with that name.'))

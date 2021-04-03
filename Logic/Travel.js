@@ -11,12 +11,11 @@ function canTravel(userDB, destination) {
 	allItems = require("../json/items/items.json");
 	let requiredItems = [];
 	for (let i in allItems) {
-		if (allItems[i].location == destination) {
+		if (allItems[i].fastTravelAllowed == true) {
 			requiredItems.push(i);
 		}
 	}
 	if (userDB.inv.findIndex((i) => requiredItems.includes(i.name)) == -1) return false;
-	//  message.channel.send(bot.embed(`You dont have any item that lets you travel to there. ( ${requiredItems.join(", ") || "No way to get there"})`));
 	else return true;
 }
 

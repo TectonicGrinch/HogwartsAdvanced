@@ -10,7 +10,7 @@ module.exports.run = async (bot, message, args) => {
     args.shift()
     const itemName = args.join(' ')
     let items = require('../../json/items/items.json')
-    let item = items.allitems[itemName]
+    let item = items[itemName]
     if(!item)
         return message.channel.send(bot.embed('No item exists with that name.'))
 
