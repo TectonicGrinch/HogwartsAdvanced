@@ -2,12 +2,12 @@ const Discord = require('discord.js');
 
 module.exports.run = async (bot, message, args) => {
 
-    let userM = message.mentions.users.first() || message.author;
+    let user = message.mentions.users.first() || message.author;
     let ecoObj = bot.db.get(user.id) || {};
     let command = args[1]
     
     if(!command){
-    message.channel.send(bot.embed(`Balance: **$${ecoObj.balance || 0}**\nJob: **${ecoObj.job?.name || 'none'}**`).setAuthor(`${userM.username}'s info`, userM.avatarURL({dynamic: true})));
+    message.channel.send(bot.embed(`Balance: **$${ecoObj.balance || 0}**\nJob: **${ecoObj.job?.name || 'none'}**`).setAuthor(`${user.username}'s info`, user.avatarURL({dynamic: true})));
 
     }else{
         switch(command){
@@ -25,7 +25,7 @@ module.exports.run = async (bot, message, args) => {
                 break;
 
             case user:
-    message.channel.send(bot.embed(`Balance: **$${ecoObj.balance || 0}**\nJob: **${ecoObj.job?.name || 'none'}**`).setAuthor(`${userM.username}'s info`, userM.avatarURL({dynamic: true})));
+    message.channel.send(bot.embed(`Balance: **$${ecoObj.balance || 0}**\nJob: **${ecoObj.job?.name || 'none'}**`).setAuthor(`${user.username}'s info`, user.avatarURL({dynamic: true})));
 
                 break;
         }

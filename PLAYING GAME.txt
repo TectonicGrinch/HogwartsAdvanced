@@ -1,0 +1,5 @@
+let connor = is
+for (gay in connor){
+    gay++;
+    connor + gay
+}

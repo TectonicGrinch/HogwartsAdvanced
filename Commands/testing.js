@@ -1,14 +1,19 @@
 const Discord = require('discord.js');
-const util = require('../Util/utils');
+const messageFuncs = require('../Logic/Message');
 module.exports.run = async (bot, message, args) => {
 
 
-let items = require(`../json/chocolatefrogcards/chocolatecards.json`) 
+let emoticons = ['1️⃣', '2️⃣', '🍆']
+const messageEmbed = new Discord.MessageEmbed()
+.setTitle('React to me bby')
+.setDescription(`Daddy!`);
 
-let itemR = util.rand(items)
+let msg = await message.channel.send(messageEmbed)
+
+messageFuncs.reactionReactMessage(emoticons, msg)
 
 
-message.channel.send(bot.embed(`${itemR}`))
+
  
 
 

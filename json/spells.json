@@ -1,0 +1,19 @@
+{
+  "stupefy": {
+      "class": "Stun",
+      "desc": "Stuns the target",
+      "response": "",
+      "damage": 0,
+      "heal": 0,
+      "stun": 5
+  },
+  "avadakedavra": {
+    "class": "illegal",
+    "desc": "kills the target",
+    "response": "",
+    "damage": 1000,
+    "heal": 0,
+    "stun": 0
+}
+    
+}

@@ -1,17 +1,20 @@
 const Discord = require('discord.js');
 const util = require("../../Util/utils");
+const moneyFuncs = require('../../Logic/Money')
 const quidteam1 = require('../../json/quidditchteams.json');
 const quidteam2 = require('../../json/quidditchteams.json');
 module.exports.run = async (bot, message, args) => {
-    //120000 2 mins collection
-//userDB.balance -= price
-let userDB = bot.db.get(message.author.id)
+    let amount = args[0]
+/*let userDB = bot.db.get(message.author.id)
 let amount = args[0]
 let price = Math.round(Number(amount))
 if(price > userDB.balance){
   message.channel.send(bot.embed(`You don't have enough money to bet that amount`));
 
-}else{
+}else{*/
+    
+    let moneyCheck = moneyFuncs.hasBalance(amount, message.author, message)
+    if(moneyCheck){
         let quidteam1t = util.dynamicgenerator(quidteam1)
         let quidteam2t = util.dynamicgenerator(quidteam2)
         let flip = Math.floor(Math.random() * 100) + 1;
@@ -69,7 +72,8 @@ if(price > userDB.balance){
         }console.log(`${message.author.username} Bet ${amount} with !quidditch bet`)
     }})
 
-}}
+}
+}
 
 module.exports.config = {
     cmdPerms: ["EMBED_LINKS"],
