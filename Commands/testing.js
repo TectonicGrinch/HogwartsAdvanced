@@ -10,7 +10,8 @@ const messageEmbed = new Discord.MessageEmbed()
 
 let msg = await message.channel.send(messageEmbed)
 
-messageFuncs.reactionReactMessage(emoticons, msg)
+messageFuncs.reactionCollect(emoticons, msg)
+
 
 
 

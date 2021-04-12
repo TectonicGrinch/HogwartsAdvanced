@@ -6,7 +6,7 @@ module.exports.run = async (bot, message, args) => {
     let itemName = "bertiebotts"
     let item = invFuncs.invHasItem(message.author, itemName)
 
-    let flip = Math.floor(Math.random() * 100) + 1;;
+    let flip = Math.floor(Math.random() * 100) + 1;
     let goodbeant = util.dynamicgenerator(bertiebotts.goodbean); 
     let badbeant = util.dynamicgenerator(bertiebotts.badbean);
    
