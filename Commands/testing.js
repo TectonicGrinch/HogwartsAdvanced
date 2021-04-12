@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-const messageFuncs = require('../Logic/Message');
+const {reactionCollect} = require('../Logic/Message');
 module.exports.run = async (bot, message, args) => {
 
 
@@ -9,8 +9,10 @@ const messageEmbed = new Discord.MessageEmbed()
 .setDescription(`Daddy!`);
 
 let msg = await message.channel.send(messageEmbed)
+const filter = (r, u) =>
+			u.id == message.author.id && (r.emoji.name == "1️⃣" || r.emoji.name == "2️⃣" || r.emoji.name == "🍆");
 
-messageFuncs.reactionCollect(emoticons, msg)
+reactionCollect(filter, emoticons, msg)
 
 
 

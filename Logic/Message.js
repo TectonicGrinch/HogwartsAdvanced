@@ -1,27 +1,18 @@
-
-function reactionReactMessage(emoticons, msg){
-    for(i in emoticons){
-        msg.react(emoticons[i])
-        return true;
-    }
+function reactionReactMessage(emoticons, msg) {
+	for (i in emoticons) {
+		msg.react(emoticons[i]);
+	}
 }
 
-function reactionCollect(emoticons, msg){
-    
-    
-      if(reactionReactMessage(emoticons, msg)){
-
-        msg.awaitReactions({ time: 60000, max: 1}).then(collected => {
-            let ret = collected.first().emoji.name
-             console.log(ret)
-            return ret;
-    })
-    }
+function reactionCollect(filter, emoticons, msg) {
+	reactionReactMessage(emoticons, msg);
+	console.log("waiting on reactions");
+	msg.awaitReactions(filter, { time: 10000, max: 1 }).then((collected) => {
+		let ret = collected.first();
+		return ret;
+	});
 }
-
-
 
 module.exports = {
-    reactionReactMessage,
-    reactionCollect
-}
+	reactionCollect,
+};
