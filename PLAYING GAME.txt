@@ -1,5 +1,11 @@
-let connor = is
-for (gay in connor){
-    gay++;
-    connor + gay
-}
+function invHasItem(user, itemName) {
+      let userDB = db.get(user.id)
+      let item = itemIndex
+      for(o in item){
+        if(userDB.inv.some(i => i.name == itemName)){
+          return true;
+        }else{
+          return false;
+        }
+      }
+    }

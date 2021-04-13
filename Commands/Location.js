@@ -4,7 +4,7 @@ const {travelTo} = require('../Logic/Travel')
 
 module.exports.run = async (bot, message, args) => {
 	let command = args[0];
-	let userDB = bot.db.get( message.author.id) || {};
+	let userDB = bot.db.get(message.author.id) || {};
 	if (!command)
 		message.channel.send(bot.embed(`**${message.author.username}** Location: **${userDB.location || "undefined"}**`));
 	  console.log(`${message.author} is located at ${userDB.location || "undefined"}`);

@@ -8,11 +8,15 @@ function reactionCollect(filter, emoticons, msg) {
 	reactionReactMessage(emoticons, msg);
 	console.log("waiting on reactions");
 	msg.awaitReactions(filter, { time: 10000, max: 1 }).then((collected) => {
-		let ret = collected.first();
+		let ret = collected.first().emoji.name;
+        console.log(ret)
 		return ret;
 	});
 }
 
+
 module.exports = {
+	reactionReactMessage,
 	reactionCollect,
+
 };

@@ -101,6 +101,13 @@ function rand(items) {
     // "~~" for a closest "int"
     return items[~~(items.length * Math.random())];
 }
+function randomName(firstNameArray, lastNameArray){
+    let firstN = Math.floor(Math.random() * firstNameArray.length);
+    let lastN = Math.floor(Math.random() * lastNameArray.length);
+    let ret = firstNameArray[firstN].concat(` ${lastNameArray[lastN]}`)
+    console.log(`Random Name: ${ret}`)
+    return ret;
+}
 
 module.exports = {
     getFilesRecursive,
@@ -110,5 +117,6 @@ module.exports = {
     rolecheck,
     dynamicgenerator,
     randomRoll,
-    rand
+    rand,
+    randomName
 }

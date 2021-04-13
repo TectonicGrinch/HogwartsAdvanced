@@ -1,4 +1,5 @@
 module.exports = async (bot) => {
+    bot.user.setUsername(bot.config.username);
 	bot.user.setActivity(bot.config.activity, { type: "PLAYING" }).catch(console.error);
 	console.log("initializing Configs");
 	initLocationalConfigs(bot.config);

@@ -15,6 +15,11 @@ const filter = (r, u) =>
 reactionCollect(filter, emoticons, msg)
 
 
+if(reactionCollect.includes('1️⃣')){
+    message.channel.send('you emoticoned 1️⃣')
+}
+
+
 
 
  
