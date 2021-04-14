@@ -1,3 +1,4 @@
+//tofix
 const Discord = require('discord.js');
 const util = require(`../../Util/utils`)
 module.exports.run = async (bot, message, args) => {
@@ -12,12 +13,13 @@ let ret = "";
 
 
 let i = 0;
+//wont check if user is bot properly
 while(i < number){
     let randomMember = message.guild.members.cache.random();
     if(randomMember.bot){
        break;
-    } else { //better be safe
-        i ++; //It'll go forward if the user isn't a bot
+    }else{ 
+        i ++; 
         ret += `\n${randomMember}`;
     }
 }
