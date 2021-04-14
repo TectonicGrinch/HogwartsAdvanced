@@ -10,7 +10,8 @@ module.exports.run = async (bot, message, args) => {
     **Bloodtype:** ${fetchObj.bloodType}
     **Special Attribute:** ${fetchObj.SpecialAttribute || 'none'}
     **Job:** ${fetchObj.job || 'Unemployed'}
-    **Balance:** $${fetchObj.balance}`).setAuthor(`${user.username}'s Character`, user.avatarURL({dynamic: true})));
+    **Balance:** $${fetchObj.balance}`).setAuthor(`${user.username}'s Character
+    **Backstory:** ${fetchObj.backstory}`, user.avatarURL({dynamic: true})));
 	//Code End
 
 }
