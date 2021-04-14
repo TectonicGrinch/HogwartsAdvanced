@@ -2,12 +2,15 @@ const Discord = require("discord.js");
 const invFuncs = require('../../Util/invFuncs');
 module.exports.run = async (bot, message, args) => {
 	let item = args[0];
+    let userDB = bot.db.get(message.author.id);
 
     if(!item){
         return message.channel.send(`you didn't list an item.`);
     }
+
     if(!invFuncs.invHasItem(message.author, item, message, bot)){
     }
+    
     if(item) {
         for(i in item){
             if(item == 'bertiebotts')
