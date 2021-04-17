@@ -13,10 +13,21 @@ function reactionCollect(filter, emoticons, msg) {
 		return ret;
 	});
 }
+function badWordsFilter(word, message){
+	let badWord = require('../json/badWords.json');
+    for(i in badWord){
+		if(badWord[i] == word){
+			return message.channel.send('Watch yo proffanity.')
+		}else{
+			 false;
+		}
+	}
+}
 
 
 module.exports = {
 	reactionReactMessage,
 	reactionCollect,
+	badWordsFilter
 
 };

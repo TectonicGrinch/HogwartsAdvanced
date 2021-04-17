@@ -1,5 +1,6 @@
 const Discord = require("discord.js");
 const invFuncs = require('../../Util/invFuncs');
+const messageFuncs = require('../../Logic/Message');
 module.exports.run = async (bot, message, args) => {
 	let item = args[0];
     let userDB = bot.db.get(message.author.id);
@@ -7,9 +8,15 @@ module.exports.run = async (bot, message, args) => {
     if(!item){
         return message.channel.send(`you didn't list an item.`);
     }
-
-    if(!invFuncs.invHasItem(message.author, item, message, bot)){
+    let messageCheck = messageFuncs.badWordsFilter(item, message);
+    
+    if(messageCheck){
+     return;
     }
+
+    if(invFuncs.invHasItem(message.author, item, message, bot)){
+    
+
     
     if(item) {
         for(i in item){
@@ -24,7 +31,7 @@ module.exports.run = async (bot, message, args) => {
                 
             }
         }
-}
+}}
 
 
     

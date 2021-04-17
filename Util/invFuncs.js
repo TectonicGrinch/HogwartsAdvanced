@@ -9,8 +9,8 @@ function invHasItem(user, itemName, message, bot) {
         if(userDB.inv.some(i => i.name == itemName)){
           return true;
         }else{
-          return message.channel.send(bot.embed(`You do not have the \n**item:** ${itemName} \nor it does not exist, Use inv to see you inventory.`));
-          
+          message.channel.send(bot.embed(`You do not have the \n**item:** ${itemName} \nor it does not exist, Use inv to see you inventory.`));
+          return false;
         }
       }
     }
