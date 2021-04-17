@@ -17,7 +17,9 @@ function badWordsFilter(word, message){
 	let badWord = require('../json/badWords.json');
     for(i in badWord){
 		if(badWord[i] == word){
-			return message.channel.send('Watch yo proffanity.')
+			message.delete()
+			console.log(`${message.author.username} Wrote: --${word}-- and it was blocked successfully.`)
+			return message.channel.send(`${message.author}, Proffanity detected message deleted.`)
 		}else{
 			 false;
 		}
